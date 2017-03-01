@@ -1,4 +1,9 @@
 import React from 'react';
-import GithubCardList from './githubcardlist';
+import GithubCard from './githubcard';
 
-// TODO need to create get req from github api and pass into GithubCard
+export default function GithubCardContainer(){
+    return(
+      <GithubCard userAvatar="http://placehold.it/350x150" userName="julio"
+                userLogin="wild Willie" />
+    )
+}

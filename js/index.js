@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GithubCardList from './components/githubcardlist';
+import ProfileSearch from './components/profilesearch';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
 
+const store = createStore();
 document.addEventListener('DOMContentLoaded', ()=>
-    ReactDOM.render(<GithubCardList />, document.getElementById('app'))
+    ReactDOM.render(
+      <Provider store={store}>
+      <ProfileSearch />
+      </Provider>, document.getElementById('app'))
 );
