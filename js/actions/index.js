@@ -1,10 +1,8 @@
-import {FETCH_USERDATA} from '../constants';
+export const FETCH_USERDATA_SUCCESS = 'FETCH_USERDATA_SUCCESS';
 
-export const fetchUserdata = (data)=> {
-  const action = {
-    type: FETCH_USERDATA,
-    data
+export function fetchUserDataSuccess(user) {
+  return {
+    type: FETCH_USERDATA_SUCCESS,
+    user
   }
-  console.log('action fetchUserdata', action);
-  return action;
 }
