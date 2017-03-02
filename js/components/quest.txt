@@ -1,4 +1,4 @@
-1. why do I need to reompile webpack on smallest changes
+1. why do I need to recompile webpack on smallest changes
 2. and can i make my build better while limiting amount of modules
 3. will react router handle the transition from {profilesearch} to {githubcard}
 4. search should be triggered by the action {search_user} which should be triggered when the user clicks the search button

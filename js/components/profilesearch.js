@@ -1,14 +1,20 @@
 import React from 'react';
+import GithubCard from './githubcard';
+import Search from './search';
 
 export default class ProfileSearch extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      query: ""
+      query: "",
+      user: null
     }
     this.onInputChange = this.onInputChange.bind(this);
     this.search = this.search.bind(this);
   }
+
+
+
   search(){
     console.log('this.state', this.state);
     const BASE_URL = 'https://api.github.com/users/';
@@ -18,23 +24,35 @@ export default class ProfileSearch extends React.Component {
       method: 'GET'
     })
     .then(response => response.json())
-    .then(json => console.log('json', json))
+    .then(json => {
+      const user = json;
+      console.log('your requested user', user);
+      this.setState({user});
+    })
   }
+
   onInputChange(event){
-    console.log('event target of the input change is', event.target.value);
+    this.setState({query: event.target.value})
   }
+
+  onKeyPressChange(event){
+    //change enter to keycode from mdn link
+    //
+    if(event.which === 13){
+      this.search()
+    }
+  }
+
   render(){
     return(
-      <form>
-        <input className="profile-search-input" value={this.state.query} type="text" onChange={event=>{this.setState({query: event.target.value})}}
-          onKeyPress={event=>{
-            if(event.key === "Enter"){
-              this.search()
-            }
-          }}
-        />
-        <div className="profile-search-submit" onClick={()=>this.search()}>Submit</div>
-      </form>
+      <div>
+        <Search queryValue={this.onInputChange} enterKey={this.onKeyPressChange}
+                runSearch={this.search}  />
+      <div>
+      <GithubCard user={this.state.user} />
+    </div>
+  </div>
     )
   }
 }
+//instead of checking key property check key which property

@@ -1,11 +1,17 @@
 import React from 'react';
 
-export default function GithubCard(props){
-  return(
-    <div>
-      <img src={props.userAvatar} />
-      <h2>{props.userName}</h2>
-      <p>{props.userLogin}</p>
-    </div>
-  )
+export default class GithubCard extends React.Component {
+  render(){
+    console.log('this.props', this.props);
+    let user = {name: ''};
+    if(this.props.user !== null) {
+      user = this.props.user;
+    }
+    return(
+      <div>
+        <img src={user.avatar_url} />
+        <div>{user.name}</div>
+      </div>
+    )
+  }
 }
