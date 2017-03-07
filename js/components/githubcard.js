@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export default class GithubCard extends React.Component {
+export class GithubCard extends React.Component {
     render() {
         console.log('this.props', this.props);
         let user = {
@@ -20,3 +21,4 @@ export default class GithubCard extends React.Component {
         )
     }
 }
+export default connect()(GithubCard)

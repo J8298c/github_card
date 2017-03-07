@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppContainer from './components/appcontainer';
-// import {Provider} from 'react-redux';
-// import {createStore} from 'redux';
+import appReducer from './reducers/index';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-// const store = createStore();
+const store = createStore(appReducer);
+
 document.addEventListener('DOMContentLoaded', () => ReactDOM.render(
-    <AppContainer/>, document.getElementById('app')));
+  <Provider store={store}>
+      <AppContainer />
+    </Provider>, document.getElementById('app')));
