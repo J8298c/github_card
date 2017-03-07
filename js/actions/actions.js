@@ -1,20 +1,34 @@
 export const FETCH_USERDATA = "FETCH_USERDATA";
 export const GET_QUERY = "GET_QUERY";
 export const ON_KEY_PRESS_CHANGE = "ON_KEY_PRESS_CHANGE";
+export const FETCH_USERDATA_SUCCESS = "FETCH_USERDATA_SUCCESS";
+export const FETCH_USERDATA_ERROR = "FETCH_USERDATA_ERROR";
 
 
 export function fetchUserData(user){
-   const action = {
+   return {
     type: FETCH_USERDATA,
     user
+    }
+}
+
+export function fetchUserDataSuccess(user){
+  return {
+    type: FETCH_USERDATA_SUCCESS,
+    user
   }
-  return action
+}
+
+export function fetchUserDataError(error){
+  return {
+    type: FETCH_USERDATA_ERROR,
+    error
+  }
 }
 
 export function getQuery(query){
-  const action = {
-    type: ON_INPUT_CHANGE,
+    return {
+    type: GET_QUERY,
     query
   }
-  return action
 }
