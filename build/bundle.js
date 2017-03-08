@@ -1,41 +1,41 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
+/******/
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
 /******/ 	// identity function for calling harmony imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
-
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -46,7 +46,7 @@
 /******/ 			});
 /******/ 		}
 /******/ 	};
-
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -55,13 +55,13 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-
+/******/
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 96);
 /******/ })
@@ -4588,43 +4588,50 @@ module.exports = setInnerHTML;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.fetchUserData = fetchUserData;
-exports.fetchUserDataSuccess = fetchUserDataSuccess;
-exports.fetchUserDataError = fetchUserDataError;
-exports.getQuery = getQuery;
-var FETCH_USERDATA = exports.FETCH_USERDATA = "FETCH_USERDATA";
-var GET_QUERY = exports.GET_QUERY = "GET_QUERY";
-var ON_KEY_PRESS_CHANGE = exports.ON_KEY_PRESS_CHANGE = "ON_KEY_PRESS_CHANGE";
-var FETCH_USERDATA_SUCCESS = exports.FETCH_USERDATA_SUCCESS = "FETCH_USERDATA_SUCCESS";
-var FETCH_USERDATA_ERROR = exports.FETCH_USERDATA_ERROR = "FETCH_USERDATA_ERROR";
+exports.fetchUser = fetchUser;
+exports.fetchUserSuccess = fetchUserSuccess;
+exports.fetchUserError = fetchUserError;
+var BASE_URL = 'https://api.github.com/users/';
+var FETCH_URL = BASE_URL + 'j8298c';
 
-function fetchUserData(user) {
+var FETCH_USER = exports.FETCH_USER = "FETCH_USER";
+function fetchUser(response) {
   return {
-    type: FETCH_USERDATA,
-    user: user
+    type: FETCH_USER,
+    response: response
+  };
+}
+var FETCH_USER_SUCCESS = exports.FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS";
+function fetchUserSuccess(payload) {
+  return {
+    type: FETCH_USER_SUCCESS,
+    payload: payload
   };
 }
 
-function fetchUserDataSuccess(user) {
+var FETCH_USER_ERROR = exports.FETCH_USER_ERROR = "FETCH_USER_ERROR";
+function fetchUserError(payload) {
   return {
-    type: FETCH_USERDATA_SUCCESS,
-    user: user
+    type: FETCH_USER_ERROR,
+    payload: payload
   };
 }
 
-function fetchUserDataError(error) {
-  return {
-    type: FETCH_USERDATA_ERROR,
-    error: error
+var fetchingUser = exports.fetchingUser = function fetchingUser() {
+  return function (dispatch) {
+    fetch(FETCH_URL, { method: 'GET' }).then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      var user = json;
+      console.log('returned user', user);
+      if (user !== undefined) {
+        dispatch(fetchUserSuccess(user));
+      } else {
+        console.log('user is not defined', user);
+      }
+    });
   };
-}
-
-function getQuery(query) {
-  return {
-    type: GET_QUERY,
-    query: query
-  };
-}
+};
 
 /***/ }),
 /* 33 */
@@ -6954,29 +6961,37 @@ var appReducer = function appReducer() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialAppState;
     var action = arguments[1];
 
-    if (action.type === _actions.GET_QUERY) {
-        (function (event) {
-            console.log('setting state with new query');
-            undefined.setState({ query: event.target.value });
-        });
-    } else if (action.type === _actions.FETCH_USERDATA) {
-        console.log('running through FETCH_USERDATA');
-        var BASE_URL = 'https://api.github.com/users/';
-        var FETCH_URL = BASE_URL + 'j8298c';
-        console.log('The Fetch URL', FETCH_URL);
-        return fetch(FETCH_URL, { method: 'GET' }).then(function (response) {
-            return response.json();
-        }).then(function (json) {
-            var user = json;
-            console.log('This is the returned user', user);
-            undefined.setState({ user: user });
-            return Object.assign({}, initialAppState, {
-                query: action.value,
-                user: user
-            });
-        });
+    if (action.type === _actions.FETCH_USER) {
         return state;
+    } else if (action.type === _actions.FETCH_USER_SUCCESS) {
+        console.log(action.payload);
+    } else if (action.type === _actions.FETCH_USER_ERROR) {
+        return action.payload;
     }
+    //  if (action.type === GET_QUERY) {
+    //      (event) => {
+    //          console.log('setting state with new query');
+    //          this.setState({query: event.target.value})
+    //      }
+    //  }
+    //  else if (action.type === FETCH_USERDATA) {
+    //      console.log('running through FETCH_USERDATA');
+    //      const BASE_URL = 'https://api.github.com/users/';
+    //      const FETCH_URL = BASE_URL + 'j8298c'
+    //      console.log('The Fetch URL', FETCH_URL);
+    //      return fetch(FETCH_URL, {method: 'GET'})
+    //          .then(response => response.json())
+    //          .then(json => {
+    //              const user = json;
+    //              console.log('This is the returned user', user);
+    //              this.setState({user});
+    //              return Object.assign({}, initialAppState, {
+    //                  query: action.value,
+    //                  user
+    //              })
+    //          });
+
+    return state;
 };
 
 exports.default = appReducer;
@@ -10632,12 +10647,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var store = exports.store = (0, _redux.createStore)(_index2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default));
 
-console.log('the state', store.getState());
+store.dispatch((0, _actions.fetchingUser)());
 
-store.dispatch({
-  type: _actions.FETCH_USERDATA
-});
-console.log('state after fetching action', store.getState());
 // document.addEventListener('DOMContentLoaded', () => ReactDOM.render(
 //   <Provider store={store}>
 //       <AppContainer />
