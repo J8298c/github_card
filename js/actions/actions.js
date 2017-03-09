@@ -1,41 +1,44 @@
-const BASE_URL = 'https://api.github.com/users/';
-const FETCH_URL = BASE_URL + 'j8298c';
-
 export const FETCH_USER = "FETCH_USER";
 export function fetchUser(response){
-  return {
-    type: FETCH_USER,
-    response
-  }
+    return {
+        type: FETCH_USER,
+        response
+    }
 }
+
 export const FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS";
-export function fetchUserSuccess(payload){
-  return {
-    type: FETCH_USER_SUCCESS,
-    payload
-  }
+export function fetchUserSuccess(returnedUser){
+    return {
+        type: FETCH_USER_SUCCESS,
+        payload: returnedUser
+    }
 }
 
 export const FETCH_USER_ERROR = "FETCH_USER_ERROR";
 export function fetchUserError(payload){
-  return {
-    type: FETCH_USER_ERROR,
-    payload
-  }
+    return {
+        type: FETCH_USER_ERROR,
+        payload
+    }
 }
 
-export const fetchingUser = () => {
-  return (dispatch) => {
-    fetch(FETCH_URL, {method: 'GET'})
-      .then(response => response.json())
-      .then(json => {
-        const user = json;
-        console.log('returned user', user);
-        if(user !== undefined){
-          dispatch(fetchUserSuccess(user));
-        } else {
-          dispatch(fetchUserError(response.status))
-        }
-      })
-  }
-}
+export const fetchingUser = (query) => {
+    return (dispatch) => {
+        const BASE_URL = `https://api.github.com/users/${query}`;
+        // const FETCH_URL = BASE_URL + this.state.query;
+        console.log(BASE_URL);
+        fetch(BASE_URL, {method: 'GET'})
+            .then(response => response.json())
+            .then(json => {
+                const user = json;
+                console.log('Hi im the returned user', user);
+                if(user !== undefined){
+                    console.log(true);
+                    dispatch(fetchUserSuccess(user));
+                } else {
+                    console.log(false)
+                    dispatch(fetchUserError(response.status))
+                }
+            })
+    }
+};

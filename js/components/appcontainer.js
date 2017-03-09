@@ -2,54 +2,43 @@ import React from 'react';
 import { connect } from 'react-redux';
 import GithubCard from './githubcard';
 import Search from './search';
-import consoleLogging from '../reducers/index';
 import { bindActionCreators } from 'redux';
-import {getQuery, fetchUserData} from '../actions/actions';
+import { fetchingUser } from '../actions/actions';
 
 
- class AppContainer extends React.Component {
+export class AppContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             query: "",
             user: null
-        }
-        // this.onInputChange = this.onInputChange.bind(this);
-        // this.fetchUserData = this.fetchUserData.bind(this);
+        };
+        this.onInputChange = this.onInputChange.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
+        this.onKeyPressChange = this.onKeyPressChange.bind(this);
     }
-    getQuery(e){
-      event.preventDefault()
-      console.log('this', this.state)
+    onInputChange(event) {
+        this.setState({
+            query: event.target.value
+        });
+    }
+    onFormSubmit(event){
+        event.preventDefault();
+        this.props.fetchingUser(this.state.query)
+        this.setState({query: ""});
     }
 
-    // fetchUserData(e) {
-    //     e.preventDefault();
-    //     console.log('this.state', this.state);
-    //     const BASE_URL = 'https://api.github.com/users/';
-    //     const FETCH_URL = BASE_URL + this.state.query //refator using ES6 Temp strings
-    //     console.log('The Fetch URL', FETCH_URL)
-    //     fetch(FETCH_URL, {method: 'GET'}).then(response => response.json()).then(json => {
-    //         const user = json;
-    //         console.log('your requested user', user);
-    //         this.setState({user});
-    //     })
-    // }
-    //
-    // onInputChange(event) {
-    //     this.setState({query: event.target.value})
-    // }
-    //
-    // onKeyPressChange(event) {
-    //     //change enter to keycode from mdn link
-    //     //
-    //     if (event.which === 13) {
-    //         this.fetchUserData()
-    //     }
-    // }
+    onKeyPressChange(event) {
+        if (event.which === 13) {
+            fetchingUser
+        }
+    }
+
+
     render() {
         return (
             <div>
-                <Search onChange={event=> this.setState({query: event.target.value})} runSearch={fetchUserData}/>
+                <Search onChange={this.onInputChange} onSubmit={this.onFormSubmit} onKeyPress={this.onKeyPressChange} />
                 <div>
                     <GithubCard user={this.state.user}/>
                 </div>
@@ -58,7 +47,12 @@ import {getQuery, fetchUserData} from '../actions/actions';
     }
 }
 const mapStateToProps = (state, props) => ({
-  query: state,
-  user: state
+    query: this.state,
+    user: this.state
 });
-export default connect(mapStateToProps)(AppContainer);
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({fetchingUser}, dispatch)
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
