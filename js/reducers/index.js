@@ -1,27 +1,25 @@
-import {FETCH_USER, FETCH_USER_SUCCESS, FETCH_USER_ERROR} from '../actions/actions';
+import {FETCH_USER, FETCH_USER_SUCCESS, FETCH_USER_ERROR, fetchingUser} from '../actions/actions';
 import { store } from '../index';
+import { combineReducers } from 'redux';
 
-const appReducer = (state = {user: null}, action) => {
+const appReducer = (state = store.state , action) => {
     if(action.type === FETCH_USER){
-        return state;
+        return (dispatch) => {
+            store.dispatch(fetchingUser)
+        }
     }
     else if(action.type === FETCH_USER_SUCCESS){
-        let returnedUser = action.payload;
-        console.log(returnedUser);
-        console.log('calling state from succes action', state);
-        console.log('the store state', store.getState());
-         const userReturned =  Object.assign({}, state, {
+        let returnedUser = action.response;
+         const newState = Object.assign({}, state, {
             user: returnedUser
-        })
-        console.log('the returned user', userReturned);
-        console.log('state after the user is assigned to state', state);
-        return userReturned;
+        });
+        console.log('state after the user is assigned to state', newState);
+        return newState;
     }
     else if(action.type === FETCH_USER_ERROR){
-        console.log('actiopn on errror', action.payload.message);
-        return action.payload
+        return action.response
     }
     return state
 };
 
-export default appReducer
+export default appReducer;

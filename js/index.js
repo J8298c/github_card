@@ -8,7 +8,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-export const store = createStore(appReducer, applyMiddleware(thunk));
+const initialAppState = {
+    query: "",
+    user: null
+};
+export const store = createStore(appReducer, initialAppState, applyMiddleware(thunk));
 
 document.addEventListener('DOMContentLoaded', () => ReactDOM.render(
     <Provider store={store}>
