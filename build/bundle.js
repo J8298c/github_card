@@ -1,41 +1,41 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
+
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-/******/
+
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/
+
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-/******/
+
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
-/******/
+
+
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-/******/
+
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
+
 /******/ 	// identity function for calling harmony imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
+
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -46,7 +46,7 @@
 /******/ 			});
 /******/ 		}
 /******/ 	};
-/******/
+
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -55,13 +55,13 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-/******/
+
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
+
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-/******/
+
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 58);
 /******/ })
@@ -1208,7 +1208,7 @@ var CallbackQueue = __webpack_require__(64);
 var PooledClass = __webpack_require__(15);
 var ReactFeatureFlags = __webpack_require__(69);
 var ReactReconciler = __webpack_require__(19);
-var Transaction = __webpack_require__(29);
+var Transaction = __webpack_require__(30);
 
 var invariant = __webpack_require__(1);
 
@@ -2504,7 +2504,7 @@ module.exports = reactProdInvariant;
 
 
 var DOMNamespaces = __webpack_require__(38);
-var setInnerHTML = __webpack_require__(31);
+var setInnerHTML = __webpack_require__(32);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
 var setTextContent = __webpack_require__(82);
@@ -2923,7 +2923,7 @@ module.exports = emptyObject;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(26);
+var EventPluginRegistry = __webpack_require__(27);
 var EventPluginUtils = __webpack_require__(39);
 var ReactErrorUtils = __webpack_require__(43);
 
@@ -3447,6 +3447,43 @@ module.exports = SyntheticUIEvent;
 
 /***/ }),
 /* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(93);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
+
+
+
+
+
+
+
+/*
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
+function isCrushed() {}
+
+if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+}
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3707,7 +3744,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3725,7 +3762,7 @@ module.exports = EventPluginRegistry;
 
 var _assign = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(26);
+var EventPluginRegistry = __webpack_require__(27);
 var ReactEventEmitterMixin = __webpack_require__(157);
 var ViewportMetrics = __webpack_require__(75);
 
@@ -4040,7 +4077,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4117,7 +4154,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4348,7 +4385,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4476,7 +4513,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4579,7 +4616,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4620,6 +4657,8 @@ var fetchingUser = exports.fetchingUser = function fetchingUser(query) {
         dispatch(fetchUser(query));
         var BASE_URL = "https://api.github.com/users/" + query;
         fetch(BASE_URL, { method: 'GET' }).then(function (response) {
+            // try to move if statement out side this block to see
+            //if that fixes the fetch avatar_url not found even though it loads
             if (!response.ok) {
                 throw Error(response.statusText);
             }
@@ -4627,32 +4666,17 @@ var fetchingUser = exports.fetchingUser = function fetchingUser(query) {
         }).then(function (response) {
             return response.json();
         }).then(function (json) {
-            dispatch(fetchUserSuccess(json));
+            setTimeout(function () {
+                dispatch(fetchUserSuccess(json));
+            }, 1000);
         }).catch(function () {
             return dispatch(fetchUserError());
         });
     };
 };
 
-//     return (dispatch) => {
-//         dispatch(fetchUser(response));
-//         const BASE_URL = `https://api.github.com/users/${query}`;
-//         fetch(BASE_URL, {method: 'GET'})
-//         if (!response.ok) {
-//             throw Error(response.statusText)
-//         }
-//         dispatch(fetchUserSuccess(response))
-//         return response
-//
-//             .then(response => response.json())
-//             .then(json => {
-//                 const user = json;
-//
-//     }
-// };
-
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4668,43 +4692,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-/***/ }),
-/* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(93);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
-
-
-
-
-
-
-
-/*
-* This is a dummy function to check if the function name has been altered by minification.
-* If the function has been minified and NODE_ENV !== 'production', warn the user.
-*/
-function isCrushed() {}
-
-if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
-}
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 35 */
@@ -4874,7 +4861,7 @@ var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(8);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(45);
-var setInnerHTML = __webpack_require__(31);
+var setInnerHTML = __webpack_require__(32);
 var setTextContent = __webpack_require__(82);
 
 function getNodeAfter(parentNode, node) {
@@ -6982,11 +6969,11 @@ var _index = __webpack_require__(96);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _actions = __webpack_require__(32);
+var _actions = __webpack_require__(33);
 
-var _reactRedux = __webpack_require__(33);
+var _reactRedux = __webpack_require__(34);
 
-var _redux = __webpack_require__(34);
+var _redux = __webpack_require__(26);
 
 var _reduxThunk = __webpack_require__(98);
 
@@ -8221,7 +8208,7 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(18);
 var DOMProperty = __webpack_require__(13);
 var React = __webpack_require__(20);
-var ReactBrowserEventEmitter = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(28);
 var ReactCurrentOwner = __webpack_require__(11);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMContainerInfo = __webpack_require__(140);
@@ -8237,7 +8224,7 @@ var ReactUpdates = __webpack_require__(10);
 var emptyObject = __webpack_require__(21);
 var instantiateReactComponent = __webpack_require__(80);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(31);
+var setInnerHTML = __webpack_require__(32);
 var shouldUpdateReactComponent = __webpack_require__(50);
 var warning = __webpack_require__(2);
 
@@ -9224,8 +9211,8 @@ module.exports = isTextInputElement;
 
 
 var ExecutionEnvironment = __webpack_require__(6);
-var escapeTextContentForBrowser = __webpack_require__(30);
-var setInnerHTML = __webpack_require__(31);
+var escapeTextContentForBrowser = __webpack_require__(31);
+var setInnerHTML = __webpack_require__(32);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -10512,7 +10499,7 @@ var _react = __webpack_require__(14);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(33);
+var _reactRedux = __webpack_require__(34);
 
 var _githubcard = __webpack_require__(99);
 
@@ -10522,9 +10509,9 @@ var _search = __webpack_require__(100);
 
 var _search2 = _interopRequireDefault(_search);
 
-var _redux = __webpack_require__(34);
+var _redux = __webpack_require__(26);
 
-var _actions = __webpack_require__(32);
+var _actions = __webpack_require__(33);
 
 var _index = __webpack_require__(58);
 
@@ -10617,11 +10604,11 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _actions = __webpack_require__(32);
+var _actions = __webpack_require__(33);
 
 var _index = __webpack_require__(58);
 
-var _redux = __webpack_require__(34);
+var _redux = __webpack_require__(26);
 
 var appReducer = function appReducer() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _index.store.state;
@@ -10703,7 +10690,7 @@ var _react = __webpack_require__(14);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(33);
+var _reactRedux = __webpack_require__(34);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10792,7 +10779,7 @@ function Search(props) {
         }),
         _react2.default.createElement(
             "button",
-            { className: "profile-search-submit", onClick: props.onSubmit },
+            { icon: "bookmark", className: "profile-search-submit", onClick: props.onSubmit },
             "Submit"
         )
     );
@@ -13016,7 +13003,7 @@ module.exports = DefaultEventPluginOrder;
 
 var EventPropagators = __webpack_require__(23);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 var eventTypes = {
   mouseEnter: {
@@ -14668,8 +14655,8 @@ var DOMNamespaces = __webpack_require__(38);
 var DOMProperty = __webpack_require__(13);
 var DOMPropertyOperations = __webpack_require__(65);
 var EventPluginHub = __webpack_require__(22);
-var EventPluginRegistry = __webpack_require__(26);
-var ReactBrowserEventEmitter = __webpack_require__(27);
+var EventPluginRegistry = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(28);
 var ReactDOMComponentFlags = __webpack_require__(66);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMInput = __webpack_require__(144);
@@ -14681,7 +14668,7 @@ var ReactMultiChild = __webpack_require__(163);
 var ReactServerRenderingTransaction = __webpack_require__(168);
 
 var emptyFunction = __webpack_require__(9);
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var isEventSupported = __webpack_require__(49);
 var shallowEqual = __webpack_require__(35);
@@ -16615,7 +16602,7 @@ var DOMChildrenOperations = __webpack_require__(37);
 var DOMLazyTree = __webpack_require__(18);
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var validateDOMNesting = __webpack_require__(51);
 
@@ -17087,7 +17074,7 @@ module.exports = {
 
 
 var DOMProperty = __webpack_require__(13);
-var EventPluginRegistry = __webpack_require__(26);
+var EventPluginRegistry = __webpack_require__(27);
 var ReactComponentTreeHook = __webpack_require__(7);
 
 var warning = __webpack_require__(2);
@@ -17574,7 +17561,7 @@ module.exports = ReactDebugTool;
 var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(10);
-var Transaction = __webpack_require__(29);
+var Transaction = __webpack_require__(30);
 
 var emptyFunction = __webpack_require__(9);
 
@@ -18002,7 +17989,7 @@ var EventPluginHub = __webpack_require__(22);
 var EventPluginUtils = __webpack_require__(39);
 var ReactComponentEnvironment = __webpack_require__(42);
 var ReactEmptyComponent = __webpack_require__(68);
-var ReactBrowserEventEmitter = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(28);
 var ReactHostComponent = __webpack_require__(70);
 var ReactUpdates = __webpack_require__(10);
 
@@ -18725,10 +18712,10 @@ var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(64);
 var PooledClass = __webpack_require__(15);
-var ReactBrowserEventEmitter = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(28);
 var ReactInputSelection = __webpack_require__(71);
 var ReactInstrumentation = __webpack_require__(8);
-var Transaction = __webpack_require__(29);
+var Transaction = __webpack_require__(30);
 var ReactUpdateQueue = __webpack_require__(44);
 
 /**
@@ -19002,7 +18989,7 @@ module.exports = ReactRef;
 var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(15);
-var Transaction = __webpack_require__(29);
+var Transaction = __webpack_require__(30);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactServerUpdateQueue = __webpack_require__(169);
 
@@ -19773,7 +19760,7 @@ var SyntheticClipboardEvent = __webpack_require__(175);
 var SyntheticEvent = __webpack_require__(12);
 var SyntheticFocusEvent = __webpack_require__(178);
 var SyntheticKeyboardEvent = __webpack_require__(180);
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 var SyntheticDragEvent = __webpack_require__(177);
 var SyntheticTouchEvent = __webpack_require__(181);
 var SyntheticTransitionEvent = __webpack_require__(182);
@@ -20124,7 +20111,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface DragEvent
@@ -20431,7 +20418,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(28);
+var SyntheticMouseEvent = __webpack_require__(29);
 
 /**
  * @interface WheelEvent
@@ -21229,7 +21216,7 @@ module.exports = getVendorPrefixedEventName;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(30);
+var escapeTextContentForBrowser = __webpack_require__(31);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -21464,7 +21451,7 @@ function createConnect() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(85);
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */

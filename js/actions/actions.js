@@ -29,6 +29,8 @@ export const fetchingUser = (query) => {
         const BASE_URL = `https://api.github.com/users/${query}`
         fetch(BASE_URL, {method: 'GET'})
             .then((response)=> {
+              // try to move if statement out side this block to see
+              //if that fixes the fetch avatar_url not found even though it loads
                 if(!response.ok){
                     throw Error(response.statusText);
                 }
@@ -36,24 +38,9 @@ export const fetchingUser = (query) => {
             })
             .then((response) => response.json())
             .then(json => {
-                dispatch(fetchUserSuccess(json))
+                setTimeout(()=> {
+                    dispatch(fetchUserSuccess(json))
+                }, 1000)
             }).catch(() => dispatch(fetchUserError()))
     }
 };
-
-//     return (dispatch) => {
-//         dispatch(fetchUser(response));
-//         const BASE_URL = `https://api.github.com/users/${query}`;
-//         fetch(BASE_URL, {method: 'GET'})
-//         if (!response.ok) {
-//             throw Error(response.statusText)
-//         }
-//         dispatch(fetchUserSuccess(response))
-//         return response
-//
-//             .then(response => response.json())
-//             .then(json => {
-//                 const user = json;
-//
-//     }
-// };

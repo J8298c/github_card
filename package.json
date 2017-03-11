@@ -12,12 +12,17 @@
     "test": "mocha --recursive --compilers js:babel-register"
   },
   "dependencies": {
+    "css-loader": "^0.27.1",
+    "node-sass": "^4.5.0",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
+    "react-toolbox": "^2.0.0-beta.7",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
