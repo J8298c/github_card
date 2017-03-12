@@ -1,17 +1,129 @@
+html {
+    background-color: #FCFCFC;
+}
+#app {
+    background-color: #FCFCFC;
+    height: 100%;
+    width: 100%;
+}
+#header {
+    display: block;
+    align-items: center;
+    background-color: #FF5252;
+    -webkit-box-shadow: 10px 10px 8px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 8px -2px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 8px -2px rgba(0,0,0,0.75);
+}
+#header h1 {
+    font-family: 'Londrina Outline', cursive;
+    color: #FF5252;
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+    background-color: #3F51B5;
+    width: 45%;
+    margin: 0 auto;
+    -webkit-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+}
+#header hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 80%;
+}
+.user-name {
+    text-align: center;
+    font-size: 33px;
+}
+@media screen and (max-width: 500px) {
+    #header h1{
+        font-family: 'Londrina Outline', cursive;
+        color: #FF5252;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+        background-color: #3F51B5;
+        width: 65%;
+        margin: 0 auto;
+        height: 55px;
+        -webkit-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+        box-shadow: 9px 9px 9px -3px rgba(0,0,0,0.75);
+    }
+    .search-form{
+        text-align: center;
+        width: 65%;
+        margin: 22% auto;
+        border: 1px solid black;
+        height: 300px;
+        border-radius: 10px;
+        padding: 10%;
 
-.login-form {
-  width: 50%;
-  display: block;
-  margin: 8% auto;
-  background-color: #F7F7F9;
-  padding: 25px;
-  border: 1px solid #F7F7F9;
-  border-radius: 10px;
+    }
+    .search-input {
+        display: block;
+        margin: 0 auto;
+        width: 85%;
+    }
+    .search-submit {
+        margin-top: 25px;
+    }
+    .profile-container {
+        width: 100%;
+
+    }
+    .profile-container img {
+       height: 250px;
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #FCFCFC;
+    }
+    .user-bio {
+        width: 85%;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+    .user-location {
+        text-align: center;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .user-blog {
+        text-align: center;
+        margin-bottom: 7px;
+    }
+    .following,.followers {
+        width: 40%;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .following {
+        margin-left: 15px;
+        text-align: right;
+    }
+    .repo-gist-container{
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .user-repos,.user-gist {
+        width: 20%;
+        text-align: center;
+    }
+    .user-repos {
+        margin-left: 90px;
+    }
+    .user-gist {
+        margin-left: 25px;
+    }
+
 }
 
-.profile-search-submit {
-  border: 1px solid black;
-  width: 45px !important;
-  height: 45px;
-  background-color: black;
+.hide {
+    display: none;
 }

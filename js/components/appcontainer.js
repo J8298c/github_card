@@ -24,8 +24,10 @@ export class AppContainer extends React.Component {
         event.preventDefault();
         this.props.fetchingUser(this.state.query);
         this.setState({query: ""});
-        let searchInput = document.getElementById('search-input');
-        searchInput.innerText = "";
+        let searchForm = document.getElementById('search');
+        searchForm.classList.add('hide');
+        searchForm.classList.remove('search-form');
+        document.getElementById('pro-container').classList.remove('hide');
     }
 
     onKeyPressChange(event) {
