@@ -3,21 +3,17 @@ import {connect} from 'react-redux';
 
 
 export class GithubCard extends React.Component {
+    componentWillMount() {
+        console.log('will mount', this.props);
+    }
     render() {
-        console.log('this.props', this.props);
-        let user = {
-            name: ''
-        };
-        if (this.props.user !== null) {
-            user = this.props.user;
-        }
         return (
-            <div id="pro-container" className="profile-container hide">
+            <div id="pro-container" className="profile-container">
                 <div className="user-bio-container">
                 <img src={user.avatar_url} />
                 <div className="user-name">{user.name}</div>
                 <div className="user-location">{user.location}</div>
-                <div className="user-blog"><a href={user.blog}>{user.blog}</a></div>
+                <div className="user-blog"><a href={user.blog}>My Portfolio Site</a></div>
                 <div className="user-bio">{user.bio}</div>
                 <div className="following">Following: <a href={user.following_url}>{user.following}</a></div>
                 <div className="followers">Followers: <a href={user.follower_url}>{user.followers}</a></div>
@@ -37,3 +33,4 @@ export class GithubCard extends React.Component {
     }
 }
 export default connect()(GithubCard)
+//condi

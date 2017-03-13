@@ -17570,6 +17570,10 @@ var _search = __webpack_require__(216);
 
 var _search2 = _interopRequireDefault(_search);
 
+var _header = __webpack_require__(215);
+
+var _header2 = _interopRequireDefault(_header);
+
 var _redux = __webpack_require__(62);
 
 var _actions = __webpack_require__(131);
@@ -17615,7 +17619,7 @@ var AppContainer = exports.AppContainer = function (_React$Component) {
             var searchForm = document.getElementById('search');
             searchForm.classList.add('hide');
             searchForm.classList.remove('search-form');
-            document.getElementById('pro-container').classList.remove('hide');
+            // document.getElementById('pro-container').classList.remove('hide');
         }
     }, {
         key: 'onKeyPressChange',
@@ -17628,14 +17632,34 @@ var AppContainer = exports.AppContainer = function (_React$Component) {
         key: 'render',
         value: function render() {
 
+            var user = this.props.user;
+            var userComponent = void 0;
+            var searchForm = void 0;
+            if (user) {
+                userComponent = _react2.default.createElement(_githubcard2.default, { user: this.props.user });
+                searchForm = _react2.default.createElement(
+                    'div',
+                    null,
+                    ' '
+                );
+            } else {
+                userComponent = _react2.default.createElement('div', null);
+                searchForm = _react2.default.createElement(_search2.default, { onChange: this.onInputChange, onSubmit: this.onFormSubmit, onKeyPress: this.onKeyPressChange });
+            }
+
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_search2.default, { onChange: this.onInputChange, onSubmit: this.onFormSubmit, onKeyPress: this.onKeyPressChange }),
+                _react2.default.createElement(_header2.default, null),
                 _react2.default.createElement(
                     'div',
                     null,
-                    _react2.default.createElement(_githubcard2.default, { user: this.props.user })
+                    searchForm,
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        userComponent
+                    )
                 )
             );
         }
@@ -17763,18 +17787,16 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
     }
 
     _createClass(GithubCard, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            console.log('will mount', this.props);
+        }
+    }, {
         key: 'render',
         value: function render() {
-            console.log('this.props', this.props);
-            var user = {
-                name: ''
-            };
-            if (this.props.user !== null) {
-                user = this.props.user;
-            }
             return _react2.default.createElement(
                 'div',
-                { id: 'pro-container', className: 'profile-container hide' },
+                { id: 'pro-container', className: 'profile-container' },
                 _react2.default.createElement(
                     'div',
                     { className: 'user-bio-container' },
@@ -17795,7 +17817,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                         _react2.default.createElement(
                             'a',
                             { href: user.blog },
-                            user.blog
+                            'My Portfolio Site'
                         )
                     ),
                     _react2.default.createElement(
@@ -17864,6 +17886,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = (0, _reactRedux.connect)()(GithubCard);
+//condi
 
 /***/ }),
 /* 215 */
@@ -17916,21 +17939,12 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = __webpack_require__(364);
 
-var _header = __webpack_require__(215);
-
-var _header2 = _interopRequireDefault(_header);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Search(props) {
     return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(_header2.default, null)
-        ),
         _react2.default.createElement(
             _reactBootstrap.FormGroup,
             { id: 'search', className: 'search-form', onSubmit: props.onSubmit },

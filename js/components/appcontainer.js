@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import GithubCard from './githubcard';
 import Search from './search';
+import Header from './header';
 import { bindActionCreators } from 'redux';
 import { fetchingUser } from '../actions/actions';
 import { store } from '../index';
@@ -27,7 +28,7 @@ export class AppContainer extends React.Component {
         let searchForm = document.getElementById('search');
         searchForm.classList.add('hide');
         searchForm.classList.remove('search-form');
-        document.getElementById('pro-container').classList.remove('hide');
+        // document.getElementById('pro-container').classList.remove('hide');
     }
 
     onKeyPressChange(event) {
@@ -37,13 +38,27 @@ export class AppContainer extends React.Component {
     }
 
     render() {
+        
+        let user = this.props.user;
+        let userComponent;
+        let searchForm;
+        if(user){
+            userComponent = <GithubCard user={this.props.user}/>;
+            searchForm = <div> </div>
+        } else {
+            userComponent = <div></div>
+            searchForm = <Search onChange={this.onInputChange} onSubmit={this.onFormSubmit} onKeyPress={this.onKeyPressChange} />
+        }
 
         return (
             <div>
-                <Search onChange={this.onInputChange} onSubmit={this.onFormSubmit} onKeyPress={this.onKeyPressChange} />
+                <Header />
+            <div>
+                {searchForm}
                 <div>
-                    <GithubCard user={this.props.user}/>
+                {userComponent}
                 </div>
+            </div>
             </div>
         )
     }
