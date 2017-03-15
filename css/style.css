@@ -6,6 +6,7 @@ html {
     height: 100%;
     width: 100%;
 }
+
 #header {
     display: block;
     align-items: center;
@@ -33,6 +34,29 @@ html {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     width: 80%;
 }
+
+#search {
+    width: 80%;
+    display: block;
+    margin: 100px auto;
+}
+span.input-group {
+    width: 100%;
+}
+
+input.search-input.form-control {
+    border: 1px solid orange;
+}
+
+button.search-submit.btn.btn-primary {
+    /* margin-top: 20px; */
+    display: block;
+    margin: 20px auto;
+}
+
+
+
+
 .user-name {
     text-align: center;
     font-size: 33px;
@@ -122,8 +146,4 @@ html {
         margin-left: 25px;
     }
 
-}
-
-.hide {
-    display: none;
 }
