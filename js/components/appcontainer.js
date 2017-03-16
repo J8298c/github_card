@@ -38,21 +38,22 @@ export class AppContainer extends React.Component {
     }
 
     render() {
-        
         let user = this.props.user;
         let userComponent;
         let searchForm;
         if(user){
+            console.log('user is', user);
             userComponent = <GithubCard user={this.props.user}/>;
             searchForm = <div> </div>
-        } else {
+         } else {
+            console.log('user is', user);
             userComponent = <div></div>
             searchForm = <Search onChange={this.onInputChange} onSubmit={this.onFormSubmit} onKeyPress={this.onKeyPressChange} />
-        }
-
+         }
+        
         return (
             <div>
-                <Header />
+            <Header />
             <div>
                 {searchForm}
                 <div>

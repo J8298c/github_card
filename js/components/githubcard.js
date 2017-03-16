@@ -3,10 +3,11 @@ import {connect} from 'react-redux';
 
 
 export class GithubCard extends React.Component {
-    componentWillMount() {
-        console.log('will mount', this.props);
-    }
+
     render() {
+        console.log('this.props', this.props);
+        console.log('the user', user);
+        let { user } = this.props;
         return (
             <div id="pro-container" className="profile-container">
                 <div className="user-bio-container">
@@ -33,4 +34,4 @@ export class GithubCard extends React.Component {
     }
 }
 export default connect()(GithubCard)
-//condi
+//use __mock__ and setup a user json with all elements needed in gihubcard 

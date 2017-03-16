@@ -1,10 +1,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import GithubCard from './components/githubcard';
 import AppContainer from './components/appcontainer';
 import appReducer from './reducers/index';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import thunk from 'redux-thunk';
 
 
@@ -16,5 +18,9 @@ export const store = createStore(appReducer, initialAppState, applyMiddleware(th
 
 document.addEventListener('DOMContentLoaded', () => ReactDOM.render(
     <Provider store={store}>
-        <AppContainer />
+    <Router history={hashHistory}>
+    	<Route path='/search' component={AppContainer} >
+    		<Route path='/search/:username' component={GithubCard} />
+    	</Route>
+    </Router>
     </Provider>, document.getElementById('app')));

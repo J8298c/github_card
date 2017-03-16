@@ -6,14 +6,13 @@ html {
     height: 100%;
     width: 100%;
 }
-
 #header {
     display: block;
     align-items: center;
     background-color: #FF5252;
-    -webkit-box-shadow: 10px 10px 8px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 8px -2px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 8px -2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
 }
 #header h1 {
     font-family: 'Londrina Outline', cursive;
@@ -24,9 +23,9 @@ html {
     background-color: #3F51B5;
     width: 45%;
     margin: 0 auto;
-    -webkit-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
 }
 #header hr {
     border: 0;
@@ -34,7 +33,6 @@ html {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     width: 80%;
 }
-
 #search {
     width: 80%;
     display: block;
@@ -43,26 +41,69 @@ html {
 span.input-group {
     width: 100%;
 }
-
 input.search-input.form-control {
     border: 1px solid orange;
 }
-
 button.search-submit.btn.btn-primary {
     /* margin-top: 20px; */
+    
     display: block;
     margin: 20px auto;
 }
 
-
-
-
-.user-name {
-    text-align: center;
-    font-size: 33px;
+/*Tablet styling */
+@media screen and (min-width: 651) and (max-width: 1024px) {
+    img {
+        vertical-align: middle;
+        width: 250px;
+        height: 250px;
+        display: block;
+        float: left;
+    }
+    .user-name {
+        text-align: center;
+        font-size: 55px;
+    }
+    .user-location {
+        display: inline-block;
+        margin-left: 35px;
+        width: 25%;
+        font-size: 21px;
+    }
+    .user-blog {
+        display: inline-block;
+        width: 25%;
+        margin-left: 20px;
+        text-align: center;
+        font-size: 21px
+    }
+    .user-bio {
+        text-align: center;
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+    }
+    .following,
+    .followers {
+        width: 20%;
+        display: inline-block;
+        margin-left: 22px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .user-gist,
+    .user-repos {
+        width: 20%;
+        display: inline-block;
+        margin-left: 22px;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 25px;
+    }
 }
+/*Mobile styling */
 @media screen and (max-width: 500px) {
-    #header h1{
+    #header h1 {
         font-family: 'Londrina Outline', cursive;
         color: #FF5252;
         font-size: 30px;
@@ -72,11 +113,11 @@ button.search-submit.btn.btn-primary {
         width: 65%;
         margin: 0 auto;
         height: 55px;
-        -webkit-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
-        box-shadow: 9px 9px 9px -3px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
+        box-shadow: 9px 9px 9px -3px rgba(0, 0, 0, 0.75);
     }
-    .search-form{
+    .search-form {
         text-align: center;
         width: 65%;
         margin: 22% auto;
@@ -84,7 +125,6 @@ button.search-submit.btn.btn-primary {
         height: 300px;
         border-radius: 10px;
         padding: 10%;
-
     }
     .search-input {
         display: block;
@@ -96,7 +136,6 @@ button.search-submit.btn.btn-primary {
     }
     .profile-container {
         width: 100%;
-
     }
     .profile-container img {
         height: 250px;
@@ -120,7 +159,8 @@ button.search-submit.btn.btn-primary {
         text-align: center;
         margin-bottom: 7px;
     }
-    .following,.followers {
+    .following,
+    .followers {
         width: 40%;
         display: inline-block;
         text-align: center;
@@ -130,12 +170,13 @@ button.search-submit.btn.btn-primary {
         margin-left: 15px;
         text-align: right;
     }
-    .repo-gist-container{
+    .repo-gist-container {
         display: flex;
         width: 80%;
         margin: 0 auto;
     }
-    .user-repos,.user-gist {
+    .user-repos,
+    .user-gist {
         width: 20%;
         text-align: center;
     }
@@ -145,5 +186,4 @@ button.search-submit.btn.btn-primary {
     .user-gist {
         margin-left: 25px;
     }
-
 }
