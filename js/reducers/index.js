@@ -13,7 +13,6 @@ const appReducer = (state = store.state , action) => {
          const newState = Object.assign({}, state, {
             user: returnedUser
         });
-        console.log('state after the user is assigned to state', newState);
         return newState;
     }
     else if(action.type === FETCH_USER_ERROR){

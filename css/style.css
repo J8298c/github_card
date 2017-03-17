@@ -1,26 +1,26 @@
 html {
-    background-color: #FCFCFC;
+    background-color: #3232AA;
 }
 #app {
-    background-color: #FCFCFC;
+    background-color: #3232AA;
     height: 100%;
     width: 100%;
 }
 #header {
     display: block;
     align-items: center;
-    background-color: #FF5252;
+    background-color: #F63440;
     -webkit-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
 }
 #header h1 {
     font-family: 'Londrina Outline', cursive;
-    color: #FF5252;
+    color: #F63440;
     font-size: 48px;
     font-weight: bolder;
     text-align: center;
-    background-color: #3F51B5;
+    background-color: #3232AA;
     width: 45%;
     margin: 0 auto;
     -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
@@ -42,7 +42,7 @@ span.input-group {
     width: 100%;
 }
 input.search-input.form-control {
-    border: 1px solid orange;
+    border: 1px solid #3F51B5;
 }
 button.search-submit.btn.btn-primary {
     /* margin-top: 20px; */
@@ -54,7 +54,6 @@ button.search-submit.btn.btn-primary {
 /*Tablet styling */
 @media screen and (min-width: 651) and (max-width: 1024px) {
     img {
-        vertical-align: middle;
         width: 250px;
         height: 250px;
         display: block;
@@ -125,6 +124,7 @@ button.search-submit.btn.btn-primary {
         height: 300px;
         border-radius: 10px;
         padding: 10%;
+        background: #FCFCFC;
     }
     .search-input {
         display: block;
@@ -134,8 +134,12 @@ button.search-submit.btn.btn-primary {
     .search-submit {
         margin-top: 25px;
     }
+    .user-name {
+        text-align: center;
+    }
     .profile-container {
         width: 100%;
+        color: #FCFCFC;
     }
     .profile-container img {
         height: 250px;

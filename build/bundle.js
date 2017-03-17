@@ -11824,8 +11824,6 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
     _createClass(GithubCard, [{
         key: 'render',
         value: function render() {
-            console.log('this.props', this.props);
-            console.log('the user', user);
             var user = this.props.user;
 
             return _react2.default.createElement(
@@ -20215,7 +20213,6 @@ var AppContainer = exports.AppContainer = function (_React$Component) {
             var userComponent = void 0;
             var searchForm = void 0;
             if (user) {
-                console.log('user is', user);
                 userComponent = _react2.default.createElement(_githubcard2.default, { user: this.props.user });
                 searchForm = _react2.default.createElement(
                     'div',
@@ -20223,7 +20220,6 @@ var AppContainer = exports.AppContainer = function (_React$Component) {
                     ' '
                 );
             } else {
-                console.log('user is', user);
                 userComponent = _react2.default.createElement('div', null);
                 searchForm = _react2.default.createElement(_search2.default, { onChange: this.onInputChange, onSubmit: this.onFormSubmit, onKeyPress: this.onKeyPressChange });
             }
@@ -20291,7 +20287,6 @@ var appReducer = function appReducer() {
         var newState = Object.assign({}, state, {
             user: returnedUser
         });
-        console.log('state after the user is assigned to state', newState);
         return newState;
     } else if (action.type === _actions.FETCH_USER_ERROR) {
         return action.response;

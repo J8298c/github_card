@@ -5,8 +5,6 @@ import {connect} from 'react-redux';
 export class GithubCard extends React.Component {
 
     render() {
-        console.log('this.props', this.props);
-        console.log('the user', user);
         let { user } = this.props;
         return (
             <div id="pro-container" className="profile-container">
