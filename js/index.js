@@ -19,8 +19,8 @@ export const store = createStore(appReducer, initialAppState, applyMiddleware(th
 document.addEventListener('DOMContentLoaded', () => ReactDOM.render(
     <Provider store={store}>
     <Router history={hashHistory}>
-    	<Route path='/search' component={AppContainer} >
-    		<Route path='/search/:username' component={GithubCard} />
+    	<Route path='/' component={AppContainer} >
+    		<Route path='/:username' component={GithubCard} />
     	</Route>
     </Router>
     </Provider>, document.getElementById('app')));

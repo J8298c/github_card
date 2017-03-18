@@ -8,6 +8,7 @@ describe('<Search />', () => {
     it('should render a form with an onSubmit props', ()=> {
         expect(wrapper.find('FormGroup')).to.have.length(1);
         expect(wrapper.props().onSubmit).to.be.defined;
+        //check the change in the state changes to match the event target value of the input
     })
     
     it('should render a the input field with an onChange, onKeyPress', ()=> {

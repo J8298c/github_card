@@ -50,7 +50,28 @@ button.search-submit.btn.btn-primary {
     display: block;
     margin: 20px auto;
 }
+.user-bio-container {
+    margin-top: 25px;
+}
 
+.user-bio-container img {
+    vertical-align: middle;
+    width: 350px;
+    height: 350px;
+    float: left;
+    margin-left: 45px;
+    border: 2px solid #fcfcfc;
+}
+.user-name {
+    font-size: 55px;
+    text-align: center;
+    width: 75%;
+}
+.user-location {
+    width: 75%;
+    font-size: 33px;
+    text-align: center;
+}
 /*Tablet styling */
 @media screen and (min-width: 651) and (max-width: 1024px) {
     img {

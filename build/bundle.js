@@ -11979,8 +11979,8 @@ document.addEventListener('DOMContentLoaded', function () {
             { history: _reactRouter.hashHistory },
             _react2.default.createElement(
                 _reactRouter.Route,
-                { path: '/search', component: _appcontainer2.default },
-                _react2.default.createElement(_reactRouter.Route, { path: '/search/:username', component: _githubcard2.default })
+                { path: '/', component: _appcontainer2.default },
+                _react2.default.createElement(_reactRouter.Route, { path: '/:username', component: _githubcard2.default })
             )
         )
     ), document.getElementById('app'));
