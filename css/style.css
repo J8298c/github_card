@@ -50,6 +50,9 @@ button.search-submit.btn.btn-primary {
     display: block;
     margin: 20px auto;
 }
+#pro-container {
+    color: #fcfcfc;
+}
 .user-bio-container {
     margin-top: 25px;
 }
@@ -71,6 +74,35 @@ button.search-submit.btn.btn-primary {
     width: 75%;
     font-size: 33px;
     text-align: center;
+}
+.user-blog {
+    width: 75%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.user-bio {
+    width: 55%;
+    text-align: -webkit-center;
+    display: block;
+    margin: 18px auto;
+    font-size: 22px;
+}
+.following, .followers {
+    width: 20%;
+    display: inline-block;
+    margin-left: 55px;
+    font-size: 20px;
+    text-align: center;
+}
+.user-gist, .user-repos{
+    width: 20%;
+    display: inline-block;
+    margin-left: 55px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 25px;
+
 }
 /*Tablet styling */
 @media screen and (min-width: 651) and (max-width: 1024px) {
