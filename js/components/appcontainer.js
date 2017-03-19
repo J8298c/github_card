@@ -6,6 +6,7 @@ import Header from './header';
 import { bindActionCreators } from 'redux';
 import { fetchingUser } from '../actions/actions';
 import { store } from '../index';
+import tapOrClick from 'react-tap-or-click';
 
 
 export class AppContainer extends React.Component {
@@ -46,7 +47,7 @@ export class AppContainer extends React.Component {
             searchForm = <div> </div>
          } else {
             userComponent = <div></div>
-            searchForm = <Search onChange={this.onInputChange} onSubmit={this.onFormSubmit} onKeyPress={this.onKeyPressChange} />
+            searchForm = <Search onChange={this.onInputChange} tapOrClick={this.onFormSubmit} onSubmit={this.onFormSubmit} onKeyPress={this.onKeyPressChange} />
          }
         
         return (

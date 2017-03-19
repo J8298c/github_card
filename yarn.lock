@@ -2818,6 +2818,10 @@ react-style-proptype@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-style-proptype/-/react-style-proptype-2.0.1.tgz#6b29b9bceb11d6be279ffee3debe1fe1edbee97b"
 
+react-tap-or-click@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-tap-or-click/-/react-tap-or-click-0.1.0.tgz#12d9d315ae45767a6935beb82fd17788fb8d48d6"
+
 react-toolbox@^2.0.0-beta.7:
   version "2.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/react-toolbox/-/react-toolbox-2.0.0-beta.7.tgz#6697eee94b3bc9fb87f69580761fd73a49ec9ad0"
