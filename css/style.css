@@ -186,6 +186,7 @@ button.search-submit.btn.btn-primary {
     }
     .search-submit {
         margin-top: 25px;
+        cursor: pointer;
     }
     .user-name {
         text-align: center;
