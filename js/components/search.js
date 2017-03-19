@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormGroup, FormControl, InputGroup, Glyphicon, Button} from 'react-bootstrap';
-
+import tapOrClick from 'react-tap-or-click';
 
 export default function Search(props){
     return(
@@ -11,7 +11,7 @@ export default function Search(props){
                    onKeyPress={props.enterKey}
             />
             </InputGroup>
-            <Button bsStyle="primary" className="search-submit" onClick={props.onSubmit}>Submit</Button>
+            <Button bsStyle="primary" className="search-submit" tapOrClick={props.onSubmit} onClick={props.onSubmit}>Submit</Button>
         </FormGroup>
         </div>
     )
