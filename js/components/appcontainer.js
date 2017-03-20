@@ -22,7 +22,7 @@ export class AppContainer extends React.Component {
         });
     }
     onFormSubmit(event){
-        event.preventDefault();
+
         this.props.fetchingUser(this.state.query);
         this.setState({query: ""});
         let searchForm = document.getElementById('search');
