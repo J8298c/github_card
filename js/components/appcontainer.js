@@ -69,6 +69,4 @@ const mapStateToProps = (state) => ({
 function mapDispatchToProps(dispatch){
     return bindActionCreators({fetchingUser}, dispatch)
 }
-
-
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
