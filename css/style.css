@@ -46,115 +46,40 @@ input.search-input.form-control {
 }
 button.search-submit.btn.btn-primary {
     /* margin-top: 20px; */
-    
     display: block;
     margin: 20px auto;
 }
-#pro-container {
-    color: #fcfcfc;
+.userProfile {
+    color: #FCFCFC;
 }
-.user-bio-container {
-    margin-top: 25px;
-}
-
-.user-bio-container img {
-    vertical-align: middle;
-    width: 350px;
-    height: 350px;
-    float: left;
-    margin-left: 45px;
-    border: 2px solid #fcfcfc;
-}
-.user-name {
-    font-size: 55px;
-    text-align: center;
-    width: 75%;
-}
-.user-location {
-    width: 75%;
-    font-size: 33px;
+.username {
+    font-size: 44px;
     text-align: center;
 }
-.user-blog {
-    width: 75%;
+.userlocation {
     text-align: center;
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 26px;
 }
-.user-bio {
-    width: 55%;
-    text-align: -webkit-center;
-    display: block;
-    margin: 18px auto;
+.userblog {
+    font-size: 28px;
+    color: blueviolet;
+    text-align: center;
+}
+.userbio {
     font-size: 22px;
-}
-.following, .followers {
-    width: 20%;
-    display: inline-block;
-    margin-left: 55px;
-    font-size: 20px;
     text-align: center;
 }
-.user-gist, .user-repos{
-    width: 20%;
-    display: inline-block;
-    margin-left: 55px;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 25px;
+.userfollowing, .userfollowers, .userrepo, .usergist {
+    font-size: 18px;
+}
+@media screen and (min-width: 701px) and (max-width: 1025px){
+    .userrepo {
+        text-align: center;
+    }
+}
 
-}
-/*Tablet styling */
-@media screen and (min-width: 651) and (max-width: 1024px) {
-    img {
-        width: 250px;
-        height: 250px;
-        display: block;
-        float: left;
-    }
-    .user-name {
-        text-align: center;
-        font-size: 55px;
-    }
-    .user-location {
-        display: inline-block;
-        margin-left: 35px;
-        width: 25%;
-        font-size: 21px;
-    }
-    .user-blog {
-        display: inline-block;
-        width: 25%;
-        margin-left: 20px;
-        text-align: center;
-        font-size: 21px
-    }
-    .user-bio {
-        text-align: center;
-        width: 90%;
-        display: block;
-        margin: 10px auto;
-    }
-    .following,
-    .followers {
-        width: 20%;
-        display: inline-block;
-        margin-left: 22px;
-        font-size: 20px;
-        text-align: center;
-    }
-    .user-gist,
-    .user-repos {
-        width: 20%;
-        display: inline-block;
-        margin-left: 22px;
-        font-size: 25px;
-        text-align: center;
-        margin-top: 25px;
-    }
-}
 /*Mobile styling */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 
     #header h1 {
         font-family: 'Londrina Outline', cursive;
@@ -170,79 +95,39 @@ button.search-submit.btn.btn-primary {
         -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
         box-shadow: 9px 9px 9px -3px rgba(0, 0, 0, 0.75);
     }
-    .search-form {
-        text-align: center;
-        width: 65%;
-        margin: 22% auto;
-        border: 1px solid black;
-        height: 300px;
-        border-radius: 10px;
-        padding: 10%;
-        background: #FCFCFC;
-    }
-    .search-input {
-        display: block;
-        margin: 0 auto;
-        width: 85%;
-    }
-    .search-submit {
-        margin-top: 25px;
-        cursor: pointer;
-    }
     .container {
-        color: #FCFCFC;
-    }
-    .user-name {
-        text-align: center;
-    }
-    .profile-container {
         width: 100%;
-        color: #FCFCFC;
+        padding: 0;
+        margin: 0;
     }
-    .user-image{
-        margin-left: 17%
-    }
+   .userimage {
+        width: 250px;
+        height: 250px;
+        display: block;
+        margin-left: 27%;
+   }
     .username{
         text-align: center;
-        color: #FCFCFC;
-        font-size: 28px;
+        font-size: 21px;
     }
     .userlocation {
-        text-align: center;
-        font-size: 26px;
-
+    text-align: center;
+    font-size: 18px;
     }
     .userblog {
-        text-align: center;
-        font-size: 26px;
+    font-size: 17px;
+    color: blueviolet;
+    text-align: center;
     }
     .userbio {
+    font-size: 16px;
+    margin-left: 10%;
+    }
+    .userfollowing, .userfollowers{
         text-align: center;
-        font-size: 24px;
     }
-    .following,
-    .followers {
-        width: 40%;
-        display: inline-block;
+    .userrepo, .usergist{
         text-align: center;
-        margin-bottom: 20px;
-        margin-top: 19px;
     }
-    .following {
-        margin-left: 15px;
-        text-align: right;
-    }
-    .userrepo,
-    .usergist {
-        width: 40%;
-        display: inline-block;
-        text-align: center;
-        font-size: 28px;
-    }
-    .userrepo {
-        margin-left: 25px;
-    }
-    .usergist {
-        margin-left: 33px;
-    }
+    
 }
