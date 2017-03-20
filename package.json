@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
+    "fetch-polyfill": "^0.8.2",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
@@ -22,7 +23,8 @@
     "react-toolbox": "^2.0.0-beta.7",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
-    "sinon": "^2.0.0"
+    "sinon": "^2.0.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
