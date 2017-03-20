@@ -12399,6 +12399,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(136);
 
+var _reactBootstrap = __webpack_require__(398);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12423,62 +12425,106 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { id: 'pro-container', className: 'profile-container' },
+                { className: 'container' },
                 _react2.default.createElement(
-                    'div',
-                    { className: 'user-bio-container' },
-                    _react2.default.createElement('img', { src: user.avatar_url }),
+                    _reactBootstrap.Media.Left,
+                    { align: 'middle' },
                     _react2.default.createElement(
-                        'div',
-                        { className: 'user-name' },
-                        user.name
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'user-location' },
-                        user.location
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'user-blog' },
+                        _reactBootstrap.Row,
+                        null,
                         _react2.default.createElement(
-                            'a',
-                            { href: user.blog },
-                            'My Portfolio Site'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'user-bio' },
-                        user.bio
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'following' },
-                        'Following: ',
-                        _react2.default.createElement(
-                            'a',
-                            { href: user.following_url },
-                            user.following
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'followers' },
-                        'Followers: ',
-                        _react2.default.createElement(
-                            'a',
-                            { href: user.follower_url },
-                            user.followers
+                            _reactBootstrap.Col,
+                            { xs: 12, md: 12, lg: 12 },
+                            _react2.default.createElement(_reactBootstrap.Image, { width: 300, height: 300, src: user.avatar_url, className: 'user-image', thumbnail: true })
                         )
                     )
                 ),
                 _react2.default.createElement(
-                    'div',
-                    { className: 'repo-gist-container' },
+                    _reactBootstrap.Row,
+                    null,
                     _react2.default.createElement(
-                        'div',
-                        { className: 'user-repos' },
+                        _reactBootstrap.Col,
+                        { md: 12, lg: 12 },
+                        _react2.default.createElement(
+                            'h3',
+                            { className: 'username' },
+                            user.name
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactBootstrap.Row,
+                    null,
+                    _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { md: 5, lg: 5 },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'userlocation' },
+                            user.location
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { md: 5, lg: 5 },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'userblog' },
+                            _react2.default.createElement(
+                                'a',
+                                { href: user.blog },
+                                'My Portfolio'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { md: 5, lg: 5 },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'userbio' },
+                            user.bio
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactBootstrap.Row,
+                    null,
+                    _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { sm: 6, md: 6, className: 'following' },
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'Following: ',
+                            _react2.default.createElement(
+                                'a',
+                                { href: user.following_url },
+                                user.following
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { sm: 6, md: 6, className: 'followers' },
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            ' Followers: ',
+                            _react2.default.createElement(
+                                'a',
+                                { href: user.follower_url },
+                                user.followers
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactBootstrap.Row,
+                    null,
+                    _react2.default.createElement(
+                        _reactBootstrap.Col,
+                        { sm: 6, md: 6, className: 'userrepo' },
                         _react2.default.createElement(
                             'h5',
                             null,
@@ -12486,13 +12532,13 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'a',
-                            { className: 'user-repo-count', href: user.repos_url },
+                            { href: user.repos_url },
                             user.public_repos
                         )
                     ),
                     _react2.default.createElement(
-                        'div',
-                        { className: 'user-gist' },
+                        _reactBootstrap.Col,
+                        { sm: 6, md: 6, className: 'usergist' },
                         _react2.default.createElement(
                             'h5',
                             null,
@@ -12500,7 +12546,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'a',
-                            { className: 'user-gist-count', href: user.gists_url },
+                            { href: user.gists_url },
                             user.public_gists
                         )
                     )
@@ -12513,7 +12559,32 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = (0, _reactRedux.connect)()(GithubCard);
-//use __mock__ and setup a user json with all elements needed in gihubcard
+//use __mock__ and setup a user json with all elements needed in gihubcard 
+// <div id="pro-container" className="profile-container">
+//                 <div className="user-bio-container">
+//                 <Col xs={12} md={12} lg={12}>
+//                 <Image src={user.avatar_url} className="center-block" responsive/>
+//                 </Col>
+//                 <Col xs={12} md={12} lg={12}>
+//                 <div className="user-name">{user.name}</div>
+//                 </Col>
+//                 <div className="user-location">{user.location}</div>
+//                 <div className="user-blog"><a href={user.blog}>My Portfolio Site</a></div>
+//                 <div className="user-bio">{user.bio}</div>
+//                 <div className="following">Following: <a href={user.following_url}>{user.following}</a></div>
+//                 <div className="followers">Followers: <a href={user.follower_url}>{user.followers}</a></div>
+//                 </div>
+//                 <div className="repo-gist-container">
+//                 <div className="user-repos">
+//                 <h5>User Repos</h5>
+//                 <a className="user-repo-count" href={user.repos_url}>{user.public_repos}</a>
+//                 </div>
+//                 <div className="user-gist">
+//                 <h5>User Gists</h5>
+//                 <a className="user-gist-count" href={user.gists_url}>{user.public_gists}</a>
+//                 </div>
+//                 </div>
+//             </div>
 
 /***/ }),
 /* 150 */

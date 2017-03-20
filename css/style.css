@@ -155,6 +155,7 @@ button.search-submit.btn.btn-primary {
 }
 /*Mobile styling */
 @media screen and (max-width: 500px) {
+
     #header h1 {
         font-family: 'Londrina Outline', cursive;
         color: #FF5252;
@@ -188,6 +189,9 @@ button.search-submit.btn.btn-primary {
         margin-top: 25px;
         cursor: pointer;
     }
+    .container {
+        color: #FCFCFC;
+    }
     .user-name {
         text-align: center;
     }
@@ -195,27 +199,26 @@ button.search-submit.btn.btn-primary {
         width: 100%;
         color: #FCFCFC;
     }
-    .profile-container img {
-        height: 250px;
-        width: 250px;
-        display: block;
-        margin: 0 auto;
-        border: 1px solid #FCFCFC;
+    .user-image{
+        margin-left: 17%
     }
-    .user-bio {
-        width: 85%;
+    .username{
         text-align: center;
-        display: block;
-        margin: 0 auto;
+        color: #FCFCFC;
+        font-size: 28px;
     }
-    .user-location {
+    .userlocation {
         text-align: center;
-        margin-bottom: 10px;
-        width: 100%;
+        font-size: 26px;
+
     }
-    .user-blog {
+    .userblog {
         text-align: center;
-        margin-bottom: 7px;
+        font-size: 26px;
+    }
+    .userbio {
+        text-align: center;
+        font-size: 24px;
     }
     .following,
     .followers {
@@ -223,25 +226,23 @@ button.search-submit.btn.btn-primary {
         display: inline-block;
         text-align: center;
         margin-bottom: 20px;
+        margin-top: 19px;
     }
     .following {
         margin-left: 15px;
         text-align: right;
     }
-    .repo-gist-container {
-        display: flex;
-        width: 80%;
-        margin: 0 auto;
-    }
-    .user-repos,
-    .user-gist {
-        width: 20%;
+    .userrepo,
+    .usergist {
+        width: 40%;
+        display: inline-block;
         text-align: center;
+        font-size: 28px;
     }
-    .user-repos {
-        margin-left: 90px;
-    }
-    .user-gist {
+    .userrepo {
         margin-left: 25px;
+    }
+    .usergist {
+        margin-left: 33px;
     }
 }
