@@ -1,6 +1,9 @@
 html {
     background-color: #3232AA;
 }
+body {
+    margin: 0;
+}
 #app {
     background-color: #3232AA;
     height: 100%;
@@ -33,50 +36,6 @@ html {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     width: 80%;
 }
-#search {
-    width: 80%;
-    display: block;
-    margin: 100px auto;
-}
-span.input-group {
-    width: 100%;
-}
-input.search-input.form-control {
-    border: 1px solid #3F51B5;
-}
-button.search-submit.btn.btn-primary {
-    /* margin-top: 20px; */
-    display: block;
-    margin: 20px auto;
-}
-.userProfile {
-    color: #FCFCFC;
-}
-.username {
-    font-size: 44px;
-    text-align: center;
-}
-.userlocation {
-    text-align: center;
-    font-size: 26px;
-}
-.userblog {
-    font-size: 28px;
-    color: blueviolet;
-    text-align: center;
-}
-.userbio {
-    font-size: 22px;
-    text-align: center;
-}
-.userfollowing, .userfollowers, .userrepo, .usergist {
-    font-size: 18px;
-}
-@media screen and (min-width: 701px) and (max-width: 1025px){
-    .userrepo {
-        text-align: center;
-    }
-}
 
 /*Mobile styling */
 @media screen and (max-width: 700px) {
@@ -95,39 +54,52 @@ button.search-submit.btn.btn-primary {
         -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
         box-shadow: 9px 9px 9px -3px rgba(0, 0, 0, 0.75);
     }
-    .container {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+
+    #search {
+        width: 65%;
+        display: block;
+        margin: 20% auto;
+        background-color: aqua;
+        height: 150px;
+        border: 2px solid white;
+        border-radius: 7px;
+        padding: 10px;
     }
-   .userimage {
+
+    .searchinput {
+        width: 80%;
+        display: block;
+        margin: 15px auto;
+        height: 20px;
+        border: 1px solid dodgerblue;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+
+    .submit {
+        width: 25%;
+        border: 1px solid cadetblue;
+        background-color: blueviolet;
+        color: white;
+        display: block;
+        margin: 0 auto;
+        -webkit-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+        -moz-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+        box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+        height: 25px;
+    }
+    .userimg {
         width: 250px;
         height: 250px;
         display: block;
-        margin-left: 27%;
-   }
-    .username{
-        text-align: center;
-        font-size: 21px;
+        margin: 35px auto;
+        border: 1px solid white;
+        padding: 3px;
     }
-    .userlocation {
+   .username {
     text-align: center;
-    font-size: 18px;
-    }
-    .userblog {
-    font-size: 17px;
-    color: blueviolet;
-    text-align: center;
-    }
-    .userbio {
-    font-size: 16px;
-    margin-left: 10%;
-    }
-    .userfollowing, .userfollowers{
-        text-align: center;
-    }
-    .userrepo, .usergist{
-        text-align: center;
+    color: white;
+    font-size: 38px;
     }
     
 }
