@@ -9054,6 +9054,10 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
         value: function render() {
             var user = this.props.user;
 
+            console.log(this.props);
+            var followersUrl = 'https://github.com/' + user.name + '?tab=followers';
+            var followingUrl = 'https://github.com/' + user.name + '?tab=following';
+            var reposUrl = 'https://github.com/' + user.login + '?tab=repositories';
             return _react2.default.createElement(
                 'div',
                 null,
@@ -9069,6 +9073,83 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                         'h2',
                         { className: 'username' },
                         user.name
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        { className: 'userlocation' },
+                        user.location
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        { className: 'userblog' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: user.blog, target: '_blank' },
+                            'My Portfolio Site'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'userbio' },
+                        user.bio
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'userstats' },
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'following' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: followersUrl },
+                            'Following:'
+                        ),
+                        ' ',
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'followingCount' },
+                            user.followers
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'following' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: followingUrl },
+                            'Following:'
+                        ),
+                        ' ',
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'followingCount' },
+                            user.following
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'following' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: reposUrl },
+                            'Repos:'
+                        ),
+                        ' ',
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'reposCount' },
+                            user.public_repos
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    _react2.default.createElement(
+                        'a',
+                        { href: 'https://j8298c.github.io/github_card/#/' },
+                        'Back to search'
                     )
                 )
             );
