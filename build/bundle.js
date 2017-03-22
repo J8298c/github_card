@@ -9055,9 +9055,11 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
             var user = this.props.user;
 
             console.log(this.props);
+            var userBlog = 'https://' + user.blog;
             var followersUrl = 'https://github.com/' + user.login + '?tab=followers';
             var followingUrl = 'https://github.com/' + user.login + '?tab=following';
             var reposUrl = 'https://github.com/' + user.login + '?tab=repositories';
+            var gistUrl = 'https://gist.github.com/' + user.login;
             return _react2.default.createElement(
                 'div',
                 null,
@@ -9084,7 +9086,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                         { className: 'userblog' },
                         _react2.default.createElement(
                             'a',
-                            { href: user.blog, target: '_blank' },
+                            { href: userBlog, target: '_blank' },
                             'My Portfolio Site'
                         )
                     ),
@@ -9140,6 +9142,21 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                             'span',
                             { className: 'reposCount' },
                             user.public_repos
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'following' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: gistUrl },
+                            'Gists:'
+                        ),
+                        ' ',
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'reposCount' },
+                            user.public_gists
                         )
                     )
                 ),

@@ -1,18 +1,23 @@
-html {
-    background-color: #3232AA;
-}
 body {
     margin: 0;
+    background-color: #424242;
+}
+a {
+    color: #F63440;
+    text-decoration: none;
+}
+span {
+    color: #FFCA28;
 }
 #app {
-    background-color: #3232AA;
+    background-color: #424242;
     height: 100%;
     width: 100%;
 }
 #header {
     display: block;
     align-items: center;
-    background-color: #F63440;
+    background-color: #3949AB;
     -webkit-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
@@ -23,7 +28,7 @@ body {
     font-size: 48px;
     font-weight: bolder;
     text-align: center;
-    background-color: #3232AA;
+    background-color: #424242;
     width: 45%;
     margin: 0 auto;
     -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
@@ -40,8 +45,12 @@ body {
     width: 65%;
     height: 300px;
     display: block;
-    margin: 100px auto;
-    background-color: darkslateblue;
+    margin: 200px auto;
+    border-radius: 25px;
+    background-color: #3949AB;
+    -webkit-box-shadow: 0px 0px 36px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 36px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 36px 3px rgba(0, 0, 0, 0.75);
     padding: 35px;
 }
 .searchinput {
@@ -49,82 +58,84 @@ body {
     display: block;
     margin: 25px auto;
     height: 30px;
-    border: 1px solid yellow;
+    border: 1px solid #424242;
     border-radius: 6px;
     padding: 5px;
+    background-color: #424242;
+    color: #fcfcfc;
+    font-size: 18px;
 }
 .submit {
     width: 200px;
-    border: 1px solid yellow;
+    border: 1px solid #F63440;
     margin: 30px auto;
     display: block;
     height: 25px;
-    color: blueviolet;
-    -webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.54);
-    -moz-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.54);
-    box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.54);
+    color: #FCFCFC;
+    background-color: #F63440;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.54);
+    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.54);
 }
- .imageContainer {
-        width: 45%;
-        display: inline-block;
-    }
-    .userimg {
-        width: 450px;
-        display: block;
-        margin-left: 3%;
-    }
-    .profileContainer {
+.imageContainer {
+    width: 45%;
+    display: inline-block;
+}
+.userimg {
+    width: 450px;
+    display: block;
+    margin-left: 3%;
+}
+.profileContainer {
     width: 45%;
     color: #fcfcfc;
     text-align: center;
     float: right;
     margin-right: 10%;
 }
-    .username {
+.username {
     font-size: 65px;
     margin-bottom: 2px;
     margin-top: 3px;
     text-align: left;
 }
-    .userlocation {
+.userlocation {
     font-size: 44px;
     margin-top: 5px;
     margin-bottom: 2px;
     text-align: left;
 }
-    .userblog {
+.userblog {
     margin-top: 5px;
     font-size: 40px;
     margin-bottom: 15px;
     text-align: left;
 }
-    .userbio {
+.userbio {
     font-size: 28px;
     margin-top: 5px;
     text-align: left;
 }
-    .userstats {
+.userstats {
     float: right;
     margin-right: 20%;
 }
-    .following {
+.following {
     float: right;
     margin-right: 50px;
     text-align: center;
     font-size: 27px;
 }
-    .homeLink {
+.homeLink {
     margin-top: 100px;
     margin-left: 25px;
     font-size: 25px;
     /* float: right; */
 }
-
-@media screen and (min-width: 701px) and (max-width: 1020px){
+@media screen and (min-width: 701px) and (max-width: 1020px) {
     #search {
         width: 65%;
         height: 200px;
-        background-color: whitesmoke;
         display: block;
         margin: 95px auto;
         padding: 10px;
@@ -133,17 +144,15 @@ body {
         width: 75%;
         margin: 35px auto;
         display: block;
-        border: 1px solid red;
         padding: 6px;
     }
     .submit {
         width: 25%;
-        background-color: blue;
         margin: 0 auto;
         display: block;
-        -webkit-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
-        -moz-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
-        box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+        -webkit-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
+        -moz-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
+        box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
     }
     .imageContainer {
         width: 45%;
@@ -158,6 +167,7 @@ body {
         width: 45%;
         display: inline-block;
         /* margin-top: 5px; */
+        
         text-align: center;
     }
     .username {
@@ -194,15 +204,14 @@ body {
     }
 }
 /*Mobile styling */
-@media screen and (max-width: 700px) {
 
+@media screen and (max-width: 700px) {
     #header h1 {
         font-family: 'Londrina Outline', cursive;
         color: #FF5252;
         font-size: 30px;
         font-weight: bolder;
         text-align: center;
-        background-color: #3F51B5;
         width: 65%;
         margin: 0 auto;
         height: 55px;
@@ -210,38 +219,29 @@ body {
         -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
         box-shadow: 9px 9px 9px -3px rgba(0, 0, 0, 0.75);
     }
-
     #search {
         width: 65%;
         display: block;
         margin: 20% auto;
-        background-color: aqua;
         height: 150px;
-        border: 2px solid white;
         border-radius: 7px;
         padding: 10px;
     }
-
     .searchinput {
         width: 80%;
         display: block;
         margin: 15px auto;
         height: 20px;
-        border: 1px solid dodgerblue;
         padding-left: 10px;
         border-radius: 5px;
     }
-
     .submit {
         width: 25%;
-        border: 1px solid cadetblue;
-        background-color: blueviolet;
-        color: white;
         display: block;
         margin: 0 auto;
-        -webkit-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
-        -moz-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
-        box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+        -webkit-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
+        -moz-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
+        box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
         height: 25px;
     }
     .imageContainer {
@@ -249,23 +249,23 @@ body {
         display: inline-block;
     }
     .profileContainer {
-    color: #fcfcfc;
-     float: none;
-    margin-right: 0;
-}
+        width: 100%;
+        color: #fcfcfc;
+        float: none;
+        margin-right: 0;
+    }
     .userimg {
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
         display: block;
         margin: 35px auto;
-        border: 1px solid white;
+        border: 1px solid #3949AB;
         padding: 3px;
     }
-
-   .username {
-    text-align: center;
-    font-size: 38px;
-    margin-bottom: 5px;
+    .username {
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 5px;
     }
     .userlocation {
         text-align: center;
@@ -284,21 +284,16 @@ body {
         margin-top: 10px;
     }
     .userstats {
-    width: 90%;
-    margin: 0 5% 0 5%;
+        width: 90%;
+        margin: 0 5% 0 5%;
     }
-
     .following {
-    width: 45%;
-    display: inline-block;
-    text-align: center;
-    margin-right: 0;
-}
+        width: 45%;
+        display: inline-block;
+        text-align: center;
+        margin-right: 0;
+    }
     .homeLink {
         text-align: center;
-    }
-    a {
-        text-decoration: none;
-        color: blueviolet;
     }
 }
