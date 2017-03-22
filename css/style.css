@@ -42,21 +42,82 @@ body {
     display: block;
     margin: 100px auto;
     background-color: darkslateblue;
+    padding: 35px;
 }
 .searchinput {
     width: 75%;
     display: block;
-    margin: 0 auto;
+    margin: 25px auto;
     height: 30px;
     border: 1px solid yellow;
     border-radius: 6px;
     padding: 5px;
 }
 .submit {
-    width: 125px;
+    width: 200px;
     border: 1px solid yellow;
     margin: 30px auto;
     display: block;
+    height: 25px;
+    color: blueviolet;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.54);
+    box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.54);
+}
+ .imageContainer {
+        width: 45%;
+        display: inline-block;
+    }
+    .userimg {
+        width: 450px;
+        display: block;
+        margin-left: 3%;
+    }
+    .profileContainer {
+    width: 45%;
+    color: #fcfcfc;
+    text-align: center;
+    float: right;
+    margin-right: 10%;
+}
+    .username {
+    font-size: 65px;
+    margin-bottom: 2px;
+    margin-top: 3px;
+    text-align: left;
+}
+    .userlocation {
+    font-size: 44px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+    .userblog {
+    margin-top: 5px;
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+    .userbio {
+    font-size: 28px;
+    margin-top: 5px;
+    text-align: left;
+}
+    .userstats {
+    float: right;
+    margin-right: 20%;
+}
+    .following {
+    float: right;
+    margin-right: 50px;
+    text-align: center;
+    font-size: 27px;
+}
+    .homeLink {
+    margin-top: 100px;
+    margin-left: 25px;
+    font-size: 25px;
+    /* float: right; */
 }
 
 @media screen and (min-width: 701px) and (max-width: 1020px){
@@ -183,9 +244,15 @@ body {
         box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
         height: 25px;
     }
-    .profileContainer{
-        color: #fcfcfc;
+    .imageContainer {
+        width: 100%;
+        display: inline-block;
     }
+    .profileContainer {
+    color: #fcfcfc;
+     float: none;
+    margin-right: 0;
+}
     .userimg {
         width: 250px;
         height: 250px;
@@ -222,10 +289,11 @@ body {
     }
 
     .following {
-        width: 45%;
-        display: inline-block;
-        text-align: center;
-    }
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 0;
+}
     .homeLink {
         text-align: center;
     }

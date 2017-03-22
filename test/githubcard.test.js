@@ -23,24 +23,51 @@ const user = {
 const wrapper = shallow(<GithubCard user={user} />);
 
 describe('<GithubCard />', () => {
-	it('should have div elems', ()=> {
-		expect(wrapper.find('div')).to.have.length(4);
-	})
-	// it('should render divs with classNames', ()=> {
-	// 	expect(wrapper.contains(<div classname="imageContainer"></div>)).to.equal(true);
-	// })
-	// it('should have an header tages', () => {
-	// 	expect(wrapper.find('h5')).to.have.length(2);
-	// 	expect(wrapper.contains([
-	// 		<h5>User Repos</h5>
-	// 	])).to.equal(true);
-	// })
 	it('should have an img element', () => {	
 		expect(wrapper.find('img')).to.have.length(1);
 	})
-	// it('should have <a> tags', () => {
-	// 	expect(wrapper.find('a')).to.have.length(5);
-	// })
+
+	it('should have div container elems', ()=> {
+		expect(wrapper.find('div')).to.have.length(4);
+		expect(wrapper.containsMatchingElement(
+			<div className="imageContainer">
+                <img src={user.avatar_url} className="userimg" />
+                </div>
+		)).to.equal(true);
+		expect(wrapper.containsMatchingElement(
+			<div className="profileContainer">
+                <h2 className="username">{user.name}</h2>
+                <h4 className="userlocation">{user.location}</h4>
+                    <h4 className="userblog"><a href={user.blog} target="_blank">My Portfolio Site</a></h4>
+                    <p className="userbio">{user.bio}</p>
+                </div>
+		)).to.equal(true);
+	})
+
+	it('should render the username', ()=> {
+		expect(wrapper.find('h2')).to.have.length(1);
+		expect(wrapper.containsMatchingElement(
+  			<h2 className="username">{user.name}</h2>
+		)).to.equal(true);
+	})
+
+	it('should render the <a> tags', () => {
+		expect(wrapper.find('a')).to.have.length(5);
+		expect(wrapper.containsMatchingElement(
+			<a href='https://j8298c.github.io/github_card/#/'>Back to search</a>
+		)).to.equal(true);
+	})
+	it('should render the user location and bio', ()=> {
+		expect(wrapper.find('h4')).to.have.length(2);
+		
+		expect(wrapper.containsMatchingElement(
+			<h4 className="userlocation">{user.location}</h4>
+		)).to.equal(true);
+
+		expect(wrapper.containsMatchingElement(
+			<h4 className="userblog"><a href={user.blog} target="_blank">My Portfolio Site</a></h4>
+		)).to.equal(true);
+	})
 })
 
 
