@@ -7,8 +7,8 @@ export class GithubCard extends React.Component {
     render() {
         let { user } = this.props;
         console.log(this.props);
-        const followersUrl = `https://github.com/${user.name}?tab=followers`;
-        const followingUrl = `https://github.com/${user.name}?tab=following`;
+        const followersUrl = `https://github.com/${user.login}?tab=followers`;
+        const followingUrl = `https://github.com/${user.login}?tab=following`;
         const reposUrl = `https://github.com/${user.login}?tab=repositories`;
         return ( 
             <div>

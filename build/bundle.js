@@ -9055,8 +9055,8 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
             var user = this.props.user;
 
             console.log(this.props);
-            var followersUrl = 'https://github.com/' + user.name + '?tab=followers';
-            var followingUrl = 'https://github.com/' + user.name + '?tab=following';
+            var followersUrl = 'https://github.com/' + user.login + '?tab=followers';
+            var followingUrl = 'https://github.com/' + user.login + '?tab=following';
             var reposUrl = 'https://github.com/' + user.login + '?tab=repositories';
             return _react2.default.createElement(
                 'div',
@@ -9145,7 +9145,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'p',
-                    null,
+                    { className: 'homeLink' },
                     _react2.default.createElement(
                         'a',
                         { href: 'https://j8298c.github.io/github_card/#/' },
@@ -9160,56 +9160,6 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = (0, _reactRedux.connect)()(GithubCard);
-
-// <div className="userProfile container">
-//                <Row>
-//                    <Col xs={10} md={4}>
-//                        <Image src={user.avatar_url} className="center-block userimage" thumbnail />
-//                    </Col>
-//                    <Row className="userInfo">
-//                        <Col xs={12} md={6}>
-//                            <p className="username">{user.name}</p>
-//                        </Col>
-//                        <Row>
-//                            <Col xs={12} md={6}>
-//                                <p className="userlocation">{user.location}</p>
-//                            </Col>
-//                            <Col xs={12} md={6}>
-//                                <p className="userblog"><a href={user.blog}>My Portfolio</a></p>
-//                            </Col>
-//                            <Col xs={9} md={6}>
-//                                <p className="userbio">{user.bio}</p>
-//                            </Col>
-//                            <Row>
-//                                <Col xs={6} md={3}>
-//                                    <div>
-//                                        <p className="userfollowing">Following:
-//                                        <a href={user.following_url}>{user.following}</a></p>
-//                                    </div>
-//                                </Col>
-//                                <Col xs={6} md={3}>
-//                                    <div>
-//                                        <p className="userfollowers"> Followers:
-//                                        <a href={user.follower_url}>{user.followers}</a></p>
-//                                    </div>
-//                                </Col>
-//                                <Col xs={6} md={3}>
-//                                    <div>
-//                                        <p className="userrepo">User Repos
-//                                        <a href={user.repos_url}>{user.public_repos}</a></p>
-//                                    </div>
-//                                </Col>
-//                                <Col xs={6} md={3}>
-//                                    <div>
-//                                        <p className="usergist">User Gists
-//                                        <a href={user.gists_url}>{user.public_gists}</a></p>
-//                                    </div>
-//                                </Col>
-//                            </Row>
-//                        </Row>
-//                    </Row>
-//                </Row>
-//            </div>
 
 /***/ }),
 /* 79 */
@@ -13770,6 +13720,7 @@ var AppContainer = exports.AppContainer = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (AppContainer.__proto__ || Object.getPrototypeOf(AppContainer)).call(this, props));
 
+        _index.store.getState();
         _this.state = _index.store.state;
         _this.onInputChange = _this.onInputChange.bind(_this);
         _this.onFormSubmit = _this.onFormSubmit.bind(_this);
@@ -13783,17 +13734,18 @@ var AppContainer = exports.AppContainer = function (_React$Component) {
             this.setState({
                 query: event.target.value
             });
+            console.log(this.state);
         }
     }, {
         key: 'onFormSubmit',
         value: function onFormSubmit(event) {
-
+            event.preventDefault();
+            console.log('logged on first attempt');
             this.props.fetchingUser(this.state.query);
             this.setState({ query: "" });
             var searchForm = document.getElementById('search');
             searchForm.classList.add('hide');
             searchForm.classList.remove('search-form');
-            // document.getElementById('pro-container').classList.remove('hide');
         }
     }, {
         key: 'onKeyPressChange',

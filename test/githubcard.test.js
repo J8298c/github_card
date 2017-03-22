@@ -35,10 +35,9 @@ describe('<GithubCard />', () => {
 	// 		<h5>User Repos</h5>
 	// 	])).to.equal(true);
 	// })
-	// it('should have div elements', () => {	
-	// 	expect(wrapper.find('div')).to.have.length(11);
-
-	// })
+	it('should have an img element', () => {	
+		expect(wrapper.find('img')).to.have.length(1);
+	})
 	// it('should have <a> tags', () => {
 	// 	expect(wrapper.find('a')).to.have.length(5);
 	// })

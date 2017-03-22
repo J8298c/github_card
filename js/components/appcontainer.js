@@ -11,6 +11,7 @@ import { store } from '../index';
 export class AppContainer extends React.Component {
     constructor(props) {
         super(props);
+        store.getState();
         this.state = store.state;
         this.onInputChange = this.onInputChange.bind(this);
         this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -20,15 +21,16 @@ export class AppContainer extends React.Component {
         this.setState({
             query: event.target.value
         });
+        console.log(this.state);
     }
-    onFormSubmit(event){
-
+    onFormSubmit(event) {
+        event.preventDefault();
+        console.log('logged on first attempt');
         this.props.fetchingUser(this.state.query);
         this.setState({query: ""});
         let searchForm = document.getElementById('search');
         searchForm.classList.add('hide');
         searchForm.classList.remove('search-form');
-        // document.getElementById('pro-container').classList.remove('hide');
     }
 
     onKeyPressChange(event) {

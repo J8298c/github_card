@@ -36,7 +36,89 @@ body {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     width: 80%;
 }
-
+.profileContainer {
+    width: 33%;
+}
+.following{
+    margin-right: 75px;
+}
+.userimg {
+    width: 350px;
+    margin-right: 2px;
+}
+@media screen and (min-width: 701px) and (max-width: 1020px){
+    #search {
+        width: 65%;
+        height: 200px;
+        background-color: whitesmoke;
+        display: block;
+        margin: 95px auto;
+        padding: 10px;
+    }
+    .searchinput {
+        width: 75%;
+        margin: 35px auto;
+        display: block;
+        border: 1px solid red;
+        padding: 6px;
+    }
+    .submit {
+        width: 25%;
+        background-color: blue;
+        margin: 0 auto;
+        display: block;
+        -webkit-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+        -moz-box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+        box-shadow: -1px 6px 70px -6px rgba(87,89,91,1);
+    }
+    .imageContainer {
+        width: 45%;
+        display: inline-block;
+    }
+    .userimg {
+        width: 250px;
+        display: block;
+        margin-left: 3%;
+    }
+    .profileContainer {
+        width: 45%;
+        display: inline-block;
+        /* margin-top: 5px; */
+        text-align: center;
+    }
+    .username {
+        font-size: 45px;
+        margin-bottom: 2px;
+    }
+    .userlocation {
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 2px;
+    }
+    .userblog {
+        margin-top: 5px;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .userbio {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    .userstats {
+        float: right;
+        display: inline-block;
+    }
+    .following {
+        float: right;
+        margin-right: 50px;
+        text-align: center;
+    }
+    .homeLink {
+        margin-top: 100px;
+        margin-left: 25px;
+        /* float: right; */
+    }
+}
 /*Mobile styling */
 @media screen and (max-width: 700px) {
 
@@ -122,8 +204,10 @@ body {
         margin-top: 10px;
     }
     .userstats {
-        width: 100%;
+    width: 90%;
+    margin: 0 5% 0 5%;
     }
+    
     .following {
         width: 45%;
         display: inline-block;
@@ -131,5 +215,9 @@ body {
     }
     .homeLink {
         text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: blueviolet;
     }
 }
