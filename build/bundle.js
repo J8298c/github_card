@@ -9165,7 +9165,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                     { className: 'homeLink' },
                     _react2.default.createElement(
                         'a',
-                        { href: 'https://j8298c.github.io/github_card/#/' },
+                        { href: 'https://j8298c.github.io/github_card/' },
                         'Back to search'
                     )
                 )
