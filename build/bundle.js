@@ -8994,8 +8994,6 @@ var fetchingUser = exports.fetchingUser = function fetchingUser(query) {
         dispatch(fetchUser(query));
         var BASE_URL = "https://api.github.com/users/" + query;
         fetch(BASE_URL, { method: 'GET' }).then(function (response) {
-            // try to move if statement out side this block to see
-            //if that fixes the fetch avatar_url not found even though it loads
             if (!response.ok) {
                 throw Error(response.statusText);
             }
@@ -9058,7 +9056,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
             var userBlog = 'https://' + user.blog;
             var followersUrl = 'https://github.com/' + user.login + '?tab=followers';
             var followingUrl = 'https://github.com/' + user.login + '?tab=following';
-            var reposUrl = 'https://github.com/' + user.login + '?tab=repositories';
+            var reposUrl = 'https://api.github.com/users/' + user.login + '/repos';
             var gistUrl = 'https://gist.github.com/' + user.login;
             return _react2.default.createElement(
                 'div',
@@ -9105,7 +9103,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                         _react2.default.createElement(
                             'a',
                             { href: followersUrl },
-                            'Following:'
+                            'Followers:'
                         ),
                         ' ',
                         _react2.default.createElement(

@@ -10,7 +10,7 @@ export class GithubCard extends React.Component {
         const userBlog = `https://${user.blog}`;
         const followersUrl = `https://github.com/${user.login}?tab=followers`;
         const followingUrl = `https://github.com/${user.login}?tab=following`;
-        const reposUrl = `https://github.com/${user.login}?tab=repositories`;
+        const reposUrl = `https://api.github.com/users/${user.login}/repos`;
         const gistUrl = `https://gist.github.com/${user.login}`;
         return ( 
             <div>
@@ -24,7 +24,7 @@ export class GithubCard extends React.Component {
                     <p className="userbio">{user.bio}</p>
                 </div>
                 <div className="userstats">
-                    <p className="following"><a href={followersUrl}>Following:</a> <span className="followingCount">{user.followers}</span></p>
+                    <p className="following"><a href={followersUrl}>Followers:</a> <span className="followingCount">{user.followers}</span></p>
                     <p className="following"><a href={followingUrl}>Following:</a> <span className="followingCount">{user.following}</span></p>
                     <p className="following"><a href={reposUrl}>Repos:</a> <span className="reposCount">{user.public_repos}</span></p>
                     <p className="following"><a href={gistUrl}>Gists:</a> <span className="reposCount">{user.public_gists}</span></p>
