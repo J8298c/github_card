@@ -45,9 +45,6 @@ describe('<GithubCard />', () => {
 
 	it('should render the <a> tags', () => {
 		expect(wrapper.find('a')).to.have.length(6);
-		expect(wrapper.containsMatchingElement(
-			<a href='https://j8298c.github.io/github_card/#/'>Back to search</a>
-		)).to.equal(true);
 	})
 	it('should render the user location and bio', ()=> {
 		expect(wrapper.find('h4')).to.have.length(2);
