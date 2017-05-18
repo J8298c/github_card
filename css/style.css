@@ -129,9 +129,6 @@ span {
         width: 25%;
         margin: 0 auto;
         display: block;
-        -webkit-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
-        -moz-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
-        box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
     }
     .imageContainer {
         width: 45%;
@@ -194,9 +191,6 @@ span {
         width: 65%;
         margin: 0 auto;
         height: 55px;
-        -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
-        box-shadow: 9px 9px 9px -3px rgba(0, 0, 0, 0.75);
     }
     #search {
         width: 65%;
