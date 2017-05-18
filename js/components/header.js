@@ -7,7 +7,6 @@ export default function Header(){
     return(
         <section id="header">
             <h1>Github Pro Viewer</h1>
-            <hr />
         </section>
     )
 }

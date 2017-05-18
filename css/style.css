@@ -18,29 +18,14 @@ span {
     display: block;
     align-items: center;
     background-color: #3949AB;
-    -webkit-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 8px -2px rgba(0, 0, 0, 0.75);
+    height: 55px;
+    padding: 4px;
 }
 #header h1 {
-    font-family: 'Londrina Outline', cursive;
-    color: #F63440;
-    font-size: 48px;
-    font-weight: bolder;
+    margin: 0;
     text-align: center;
-    background-color: #424242;
-    width: 45%;
-    margin: 0 auto;
-    -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.75);
 }
-#header hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    width: 80%;
-}
+
 #search {
     width: 65%;
     height: 300px;
@@ -73,9 +58,6 @@ span {
     height: 25px;
     color: #FCFCFC;
     background-color: #F63440;
-    -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.54);
-    -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.54);
-    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.54);
 }
 .imageContainer {
     width: 45%;

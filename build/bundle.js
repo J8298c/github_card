@@ -9056,7 +9056,8 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
             var userBlog = 'https://' + user.blog;
             var followersUrl = 'https://github.com/' + user.login + '?tab=followers';
             var followingUrl = 'https://github.com/' + user.login + '?tab=following';
-            var reposUrl = 'https://api.github.com/users/' + user.login + '/repos';
+            var repoUrl = 'https://github.com/' + user.login + '?tab=repositories';
+            // const reposUrl = `https://api.github.com/users/${user.login}/repos`;
             var gistUrl = 'https://gist.github.com/' + user.login;
             return _react2.default.createElement(
                 'div',
@@ -9132,7 +9133,7 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                         { className: 'following' },
                         _react2.default.createElement(
                             'a',
-                            { href: reposUrl },
+                            { href: repoUrl },
                             'Repos:'
                         ),
                         ' ',
@@ -13845,8 +13846,7 @@ function Header() {
             "h1",
             null,
             "Github Pro Viewer"
-        ),
-        _react2.default.createElement("hr", null)
+        )
     );
 } /**
    * Created by juliomojica on 3/11/17.
