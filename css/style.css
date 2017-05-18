@@ -212,9 +212,6 @@ span {
         width: 25%;
         display: block;
         margin: 0 auto;
-        -webkit-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
-        -moz-box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
-        box-shadow: -1px 6px 70px -6px rgba(87, 89, 91, 1);
         height: 25px;
     }
     .imageContainer {
