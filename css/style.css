@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #34495e;
+    background-color: #BDBDBD;
 }
 a {
     color: #F63440;
@@ -10,20 +10,22 @@ span {
     color: #FFCA28;
 }
 #app {
-    background-color: #34495e;
+    background-color: #BDBDBD;
     height: 100%;
     width: 100%;
 }
 #header {
     display: block;
     align-items: center;
-    background-color: #3949AB;
-    height: 55px;
+    background-color: #212121;
+    height: 46px;
     padding: 4px;
 }
 #header h1 {
     margin: 0;
     text-align: center;
+    font-family: 'Merriweather', serif;
+    color: #BDBDBD;
 }
 
 #search {
@@ -183,8 +185,8 @@ span {
 
 @media screen and (max-width: 700px) {
     #header h1 {
-        font-family: 'Londrina Outline', cursive;
-        color: #FF5252;
+        font-family: 'Merriweather', serif;
+        color: #fcfcfc;
         font-size: 30px;
         font-weight: bolder;
         text-align: center;
