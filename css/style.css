@@ -17,15 +17,17 @@ span {
 #header {
     display: block;
     align-items: center;
-    background-color: #212121;
+    background-color: #050517;
     height: 46px;
     padding: 4px;
+    opacity: .9;
 }
 #header h1 {
-    margin: 0;
+    margin: 4px;
     text-align: center;
     font-family: 'Merriweather', serif;
-    color: #BDBDBD;
+    color: #CF5C36;
+    opacity: 1.0;
 }
 
 #search {
@@ -38,16 +40,16 @@ span {
     padding: 35px;
 }
 .searchinput {
-    width: 75%;
+    width: 65%;
     display: block;
     margin: 25px auto;
-    height: 30px;
+    height: 22px;
     border: 1px solid #424242;
     border-radius: 6px;
     padding: 5px;
     background-color: #424242;
     color: #fcfcfc;
-    font-size: 18px;
+    font-size: 15px;
 }
 .submit {
     width: 200px;
@@ -115,17 +117,17 @@ span {
 }
 @media screen and (min-width: 701px) and (max-width: 1020px) {
     #search {
-        width: 65%;
-        height: 200px;
+        width: 51%;
+        height: 135px;
         display: block;
         margin: 95px auto;
-        padding: 10px;
+        padding: 5px;
     }
     .searchinput {
-        width: 75%;
-        margin: 35px auto;
+        width: 60%;
+        margin: 24px auto;
         display: block;
-        padding: 6px;
+        padding: 3px;
     }
     .submit {
         width: 25%;
@@ -185,7 +187,7 @@ span {
 
 @media screen and (max-width: 700px) {
     #header h1 {
-        font-family: 'Merriweather', serif;
+        font-family: 'Roboto Slab', serif;
         color: #fcfcfc;
         font-size: 30px;
         font-weight: bolder;
@@ -195,26 +197,34 @@ span {
         height: 55px;
     }
     #search {
-        width: 65%;
+        width: 60%;
+        height: 142px;
         display: block;
-        margin: 20% auto;
-        height: 150px;
-        border-radius: 7px;
-        padding: 10px;
+        margin: 95px auto;
+        padding: 5px;
+        border-radius: 10px;
     }
     .searchinput {
-        width: 80%;
+        width: 75%;
         display: block;
-        margin: 15px auto;
-        height: 20px;
-        padding-left: 10px;
-        border-radius: 5px;
+        margin: 25px auto;
+        height: 18px;
+        border: 1px solid #FBFBFF;
+        border-radius: 4px;
+        padding: 4px;
+        background-color: #FBFBFF;
+        color: #fcfcfc;
+        font-size: 15px;
     }
     .submit {
-        width: 25%;
+        width: 33%;
         display: block;
         margin: 0 auto;
         height: 25px;
+        border: 1px solid #F63440;
+        background-color: #F63440;
+        font-size: 15px;
+        border-radius: 5px;
     }
     .imageContainer {
         width: 100%;
