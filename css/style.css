@@ -3,11 +3,11 @@ body {
     background-color: #1F2229;
 }
 a {
-    color: #F63440;
+    color: #fcfcfc;
     text-decoration: none;
 }
 span {
-    color: #FFCA28;
+    color: #269F42;
 }
 
 #header {
@@ -201,7 +201,7 @@ input {
     font-size: 15px;
     }
     .submit {
-    width: 42%;
+    width: 21%;
     display: block;
     margin: 0 auto;
     height: 25px;
@@ -211,5 +211,55 @@ input {
     border-radius: 5px;
     color: #fcfcfc;
     }
-
+    .userimg {
+    width: 98%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    }
+    .username {
+    font-size: 34px;
+    margin-bottom: 46px;
+    text-align: center;
+    }
+    .userlocation {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    width: 45%;
+    text-align: center;
+    display: inline-block;
+    }
+    a {
+    color: #fcfcfc;
+    text-decoration: none;
+    }
+    .userbio {
+    font-size: 24px;
+    margin-top: 5px;
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    margin-bottom: 11%;
+    }
+    .following {
+    float: left;
+    margin-right: 0px;
+    text-align: center;
+    margin-left: 5%;
+    font-size: 18px;
+    }
+    .profileContainer {
+    width: 90%;
+    display: block;
+    color: #fcfcfc;
+    margin: 0 auto;
+    }
+    .userblog{
+        font-size: 16px;
+    }
+    span {
+    color: #269F42;
+    }
 }
