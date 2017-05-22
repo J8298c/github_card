@@ -28,7 +28,7 @@ describe('<GithubCard />', () => {
 	})
 
 	it('should have div container elems', ()=> {
-		expect(wrapper.find('div')).to.have.length(4);
+		expect(wrapper.find('div')).to.have.length(5);
 		expect(wrapper.containsMatchingElement(
 			<div className="imageContainer">
                 <img src={user.avatar_url} className="userimg" />
