@@ -11,7 +11,7 @@ export default function Search(props){
             <button className="submit" onClick={props.onSubmit}>Submit</button>
         </form>
         <div className="banner-image">
-        <object data="/images/git.svg" type="image/svg+xml" alt="github logo" className="git-svg" height="400px" width="400px" ></object>
+        <object data="https://github.com/J8298c/github_card/blob/master/images/git.svg" type="image/svg+xml" alt="github logo" className="git-svg" height="400px" width="400px" ></object>
             </div>
         </div>
     )

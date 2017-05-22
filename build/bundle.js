@@ -13892,7 +13892,7 @@ function Search(props) {
         _react2.default.createElement(
             "div",
             { className: "banner-image" },
-            _react2.default.createElement("object", { data: "/images/git.svg", type: "image/svg+xml", alt: "github logo", className: "git-svg", height: "400px", width: "400px" })
+            _react2.default.createElement("object", { data: "https://github.com/J8298c/github_card/blob/master/images/git.svg", type: "image/svg+xml", alt: "github logo", className: "git-svg", height: "400px", width: "400px" })
         )
     );
 }
