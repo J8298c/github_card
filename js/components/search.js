@@ -10,6 +10,9 @@ export default function Search(props){
                 onKeyPress={props.enterKey} />
             <button className="submit" onClick={props.onSubmit}>Submit</button>
         </form>
+        <div className="banner-image">
+                <img src="/images/git.svg" alt="github logo" />
+            </div>
         </div>
     )
 }

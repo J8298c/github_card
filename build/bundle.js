@@ -9160,12 +9160,16 @@ var GithubCard = exports.GithubCard = function (_React$Component) {
                     )
                 ),
                 _react2.default.createElement(
-                    'p',
-                    { className: 'homeLink' },
+                    'div',
+                    null,
                     _react2.default.createElement(
-                        'a',
-                        { href: 'https://j8298c.github.io/github_card/' },
-                        'Back to search'
+                        'p',
+                        { className: 'homeLink' },
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'https://j8298c.github.io/github_card/' },
+                            'Back to search'
+                        )
                     )
                 )
             );
@@ -13884,6 +13888,11 @@ function Search(props) {
                 { className: "submit", onClick: props.onSubmit },
                 "Submit"
             )
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "banner-image" },
+            _react2.default.createElement("img", { src: "/images/git.svg", alt: "github logo" })
         )
     );
 }

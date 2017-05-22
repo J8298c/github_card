@@ -30,7 +30,9 @@ export class GithubCard extends React.Component {
                     <p className="following"><a href={repoUrl}>Repos:</a> <span className="reposCount">{user.public_repos}</span></p>
                     <p className="following"><a href={gistUrl}>Gists:</a> <span className="reposCount">{user.public_gists}</span></p>
                 </div>
-                <p className="homeLink"><a href='https://j8298c.github.io/github_card/'>Back to search</a></p>
+                <div>
+                    <p className="homeLink"><a href='https://j8298c.github.io/github_card/'>Back to search</a></p>
+                </div>
             </div>          
         )
     }
