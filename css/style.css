@@ -69,10 +69,11 @@ span {
 input {
  outline:none;
 }
-.banner-image img {
-    width: 25%;
-    display: block;
-    margin: 0 auto;
+.git-svg {
+    width: 100%;
+    /* display: block; */
+    /* margin: 0 auto; */
+    margin-left: 8%;
 }
 .imageContainer {
     width: 45%;
