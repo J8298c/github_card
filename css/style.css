@@ -1,6 +1,28 @@
 body {
     margin: 0;
     background-color: #1F2229;
+    font-family: 'Roboto', sans-serif;
+}
+.welcome-msg {
+    width: 65%;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    color: #269F42;
+}
+.landingpage-img {
+    width: 80%;
+    display: block;
+    margin: 68px auto;
+}
+.landingpage-img img {
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+.welcome-msg p {
+    font-size: 22px;
+    /* margin-left: 21px; */
 }
 a {
     color: #fcfcfc;
@@ -9,7 +31,14 @@ a {
 span {
     color: #269F42;
 }
-
+i.fa.fa-github.githubimg {
+    font-size: 300px;
+    color: #269F42;
+    text-align: center;
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
 #header {
     display: block;
     align-items: center;
@@ -69,11 +98,8 @@ span {
 input {
  outline:none;
 }
-.git-svg {
+.imagebanner{
     width: 100%;
-    /* display: block; */
-    /* margin: 0 auto; */
-    margin-left: 8%;
 }
 .imageContainer {
     width: 45%;
@@ -261,5 +287,13 @@ input {
     }
     span {
     color: #269F42;
+    }
+    i.fa.fa-github.githubimg {
+    font-size: 200px;
+    color: #269F42;
+    text-align: center;
+    display: block;
+    width: 75%;
+    margin: 0 auto;
     }
 }
