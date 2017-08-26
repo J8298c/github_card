@@ -1,0 +1,18 @@
+img.ui.huge.image.imagelogo {
+  width: 100px;
+  margin: 0 auto;
+}
+.imageBannerDiv {
+  background-color: springgreen;
+  height: 100px;
+}
+.ui.input.searchInput {
+  width: 78%;
+  margin: 40px auto 10px;
+  display: block;
+}
+button.ui.button.searchButton {
+  width: 35%;
+  display: block;
+  margin: 0 auto;
+}

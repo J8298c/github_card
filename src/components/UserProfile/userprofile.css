@@ -1,0 +1,36 @@
+.imageDiv {
+  width: 80%;
+  margin: 20px auto;
+}
+.imageDiv img {
+  width: 20%;
+  margin: 0 auto;
+  display: block;
+}
+.imageDiv h1 {
+  text-align: center;
+}
+.buttonDiv {
+  width: 45%;
+  display: inline-block;
+  /* margin: 25px auto; */
+  margin-left: 3%;
+  margin-top: 5%;
+}
+button.ui.purple.button.contentBtn {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+.cardDiv {
+  width: 50%;
+  display: inline-block;
+  margin: 0 auto 24px;
+}
+.ui.two.column.grid.repodiv {
+  width: 90%;
+  display: block;
+  margin: 25px auto;
+  padding: 1%;
+}
