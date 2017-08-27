@@ -20,6 +20,7 @@ export function fetchUserError(bool) {
   fetch user from api request username is supplied
   VIA the query parameter
 */
+
 export default function fetchingUser(query) {
   return (dispatch) => {
     const url = `https://api.github.com/users/${query}`;

@@ -5,13 +5,14 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import './index.css';
 import Routes from './Routes';
+import userReducers from './reducers/index';
 import registerServiceWorker from './registerServiceWorker';
 
 const initAppState = {};
-const store = createStore({}, initAppState, applyMiddleware(thunk));
+const store = createStore(userReducers, initAppState, applyMiddleware(thunk));
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <Routes />
   </Provider>, document.getElementById('root')
 );
