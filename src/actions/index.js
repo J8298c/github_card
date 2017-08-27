@@ -21,7 +21,7 @@ export function fetchUserError(bool) {
   VIA the query parameter
 */
 
-export default function fetchingUser(query) {
+export function fetchingUser(query) {
   return (dispatch) => {
     const url = `https://api.github.com/users/${query}`;
     fetch(url)

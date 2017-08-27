@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchingUser } from '../../actions/index';
 import Buttons from '../Button';
 import Inputs from '../Inputs';
 import ImageBanner from '../ImageBanner';
@@ -16,6 +19,7 @@ class AppSearchContainer extends Component {
     event.preventDefault();
     const { query } = this.state;
     console.log(query);
+    this.props.fetchingUser(query);
   }
   render() {
     return (
@@ -37,4 +41,13 @@ class AppSearchContainer extends Component {
     );
   }
 }
-export default AppSearchContainer;
+function mapStateToProps(state) {
+  console.log(state, 'state in mapstate');
+  return {
+    state,
+  };
+}
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchingUser }, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(AppSearchContainer);
