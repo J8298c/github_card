@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { fetchingUser } from '../../actions/index';
 import Buttons from '../Button';
 import Inputs from '../Inputs';
-import ImageBanner from '../ImageBanner';
+// import ImageBanner from '../ImageBanner';
 import './usersearch.css';
 
 class AppSearchContainer extends Component {
@@ -24,16 +25,17 @@ class AppSearchContainer extends Component {
     return (
       <div>
         <Form>
-          <Inputs 
+          <Inputs
             placeholder='...Search User' onChange={event => { this.setState({ query: event.target.value }); }}
             className='searchInput'
           />
           <Buttons
             onClick={this.onFormSubmit} name='github' className='searchButton' content='Submit'
+            linkTo='/profile'
           />
         </Form>
       </div>
-      
+
     );
   }
 }

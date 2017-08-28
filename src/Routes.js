@@ -11,7 +11,7 @@ const Routes = () => (
       <NavBar />
       <Route exact path='/' component={LandingPage} />
       <Route path='/search' component={UserSearchContainer} />
-      <Route path='/:user/profile' component={UserProfile} />
+      <Route path='/profile' component={UserProfile} />
     </div>
   </Router>
 );

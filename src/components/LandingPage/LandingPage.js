@@ -15,10 +15,10 @@ const LandingPage = () => (
       src={programmer} size='large' className='landingImage'
       containerName='landingImageContainer'
     />
-    <Link to='/search'><Button
+    <Button
       className='landingpageButton' name='github alternate'
-      content='Start'
-    /></Link>
+      content='Start' linkTo='/search'
+    />
   </div>
 );
 export default LandingPage;
