@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Grid } from 'semantic-ui-react';
-// import ImageBanner from '../ImageBanner';
+import { Link } from 'react-router-dom';
+import AppHeader from '../AppHeader';
+import ImageBanner from '../ImageBanner';
 import Buttons from '../Button';
-import mockImage from '../../images/GithubLogo.svg';
 // import RepoCard from '../RepoCard';
 import './userprofile.css';
 
 class UserProfile extends Component {
   render() {
+    const { user } = this.props;
+    console.log(user, 'user out of props');
+    let userHeader;
+    if (user) {
+      userHeader = (
+        <div>
+          <ImageBanner src={user.avatar_url} size='small' className='userimage' />
+          <AppHeader as='h1' className='username' headerContent={user.name} />
+        </div>
+      );
+    } else {
+      userHeader = '...Loading';
+    }
     return (
       <div>
-        <div className='imageDiv'>
-          <img src={mockImage} />
-          <h1>Julio</h1>
-        </div>
+        {userHeader}
         <Buttons
           color='purple' content='Gists' className='contentBtn' divClassName='buttonDiv' name='github alternate'
         />
@@ -22,16 +33,22 @@ class UserProfile extends Component {
           color='purple' content='Follow' className='contentBtn' divClassName='buttonDiv' name='user plus'
         />
         <Grid columns={2} className='repodiv'>
-          1
+          <div>1</div>
+          <div>2</div>
         </Grid>
+        <Link to='/search'><Buttons 
+          color='purple' content='Back to search' className='contentBtn' divClassName='buttonDiv' name='arrow left'
+        /></Link>
       </div>
     );
   }
 }
 function mapStateToProps(state) {
   console.log(state, 'state');
+  const { user } = state;
+  console.log(user, 'user');
   return {
-    state,
+    user,
   };
 }
 

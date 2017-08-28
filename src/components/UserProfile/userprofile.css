@@ -34,3 +34,11 @@ button.ui.purple.button.contentBtn {
   margin: 25px auto;
   padding: 1%;
 }
+img.ui.small.image.userimage {
+  margin: 26px auto;
+}
+.ui.header.username {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}

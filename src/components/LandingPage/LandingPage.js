@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import AppHeader from '../AppHeader';
 import ImageBanner from '../ImageBanner';
 import programmer from '../../images/brogrammer.jpg';

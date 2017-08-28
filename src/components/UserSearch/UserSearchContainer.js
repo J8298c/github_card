@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { fetchingUser } from '../../actions/index';
 import Buttons from '../Button';
 import Inputs from '../Inputs';
+import UserProfile from '../UserProfile/UserProfile';
 // import ImageBanner from '../ImageBanner';
 import './usersearch.css';
 
@@ -20,6 +20,7 @@ class AppSearchContainer extends Component {
     const { query } = this.state;
     console.log(query);
     this.props.fetchingUser(query);
+    this.props.history.push('/profile');
   }
   render() {
     return (
@@ -40,7 +41,6 @@ class AppSearchContainer extends Component {
   }
 }
 function mapStateToProps(state) {
-  console.log(state, 'state in mapstate');
   return {
     state,
   };
