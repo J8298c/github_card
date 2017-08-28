@@ -1,0 +1,16 @@
+.ui.header.title {
+    color: #00E676;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 33px;
+}
+.landingImageContainer {
+    height: 300px;
+    margin-top: 31px;
+}
+button.ui.button.landingpageButton {
+    width: 26%;
+    display: block;
+    margin: 25px auto;
+    background-color: #00E676;
+}

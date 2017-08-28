@@ -5,8 +5,8 @@ import './navbar.css';
 
 const NavBar = () => (
   <div>
-    <ImageBanner 
-      src={githubLogo} size='huge'
+    <ImageBanner
+      src={githubLogo} size='huge' className='imagelogo' containerName='imageBannerDiv'
     />
   </div>
 );
