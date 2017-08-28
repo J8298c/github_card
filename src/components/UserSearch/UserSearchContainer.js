@@ -6,7 +6,6 @@ import { fetchingUser } from '../../actions/index';
 import Buttons from '../Button';
 import Inputs from '../Inputs';
 import ImageBanner from '../ImageBanner';
-import githubLogo from '../../images/GithubLogo.svg';
 import './usersearch.css';
 
 class AppSearchContainer extends Component {
@@ -24,9 +23,6 @@ class AppSearchContainer extends Component {
   render() {
     return (
       <div>
-        <ImageBanner
-          src={githubLogo} size='huge'
-        />
         <Form>
           <Inputs 
             placeholder='...Search User' onChange={event => { this.setState({ query: event.target.value }); }}
