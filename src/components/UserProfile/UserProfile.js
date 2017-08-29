@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import AppHeader from '../AppHeader';
 import ImageBanner from '../ImageBanner';
 import Buttons from '../Button';
+import UserLocations from './userLocation';
 // import RepoCard from '../RepoCard';
 import './userprofile.css';
 
@@ -18,6 +19,10 @@ class UserProfile extends Component {
         <div>
           <ImageBanner src={user.avatar_url} size='small' className='userimage' />
           <AppHeader as='h1' className='username' headerContent={user.name} />
+          <AppHeader as='h6' className='username' headerContent={user.bio} />
+          <UserLocations 
+            className='userbio' bioLocation={user.location} bioUrl={user.url} bioBlog={user.blog}
+          />
         </div>
       );
     } else {
